@@ -1,0 +1,4 @@
+https://developer.riotgames.com/docs/lol#data-dragon_data-assets // ASSETS
+
+https://developer.riotgames.com/docs/tft // API TFT
+
