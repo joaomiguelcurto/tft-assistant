@@ -67,11 +67,41 @@ button:hover{
   
 }
 
-.champion-card:hover {
+.champion-card.tier-5:hover {
+  border-color: #ffd700;
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6);
+  transform: scale(1.08);
+}
+
+.champion-card.tier-4:hover {
+  border-color: #cc00ff;
+  box-shadow: 0 8px 30px rgba(212, 0, 255, 0.6);
+  transform: scale(1.08);
+}
+
+.champion-card.tier-3:hover {
+  border-color: #008cff;
+  box-shadow: 0 8px 30px rgba(0, 102, 255, 0.6);
+  transform: scale(1.08);
+}
+
+.champion-card.tier-2:hover {
+  border-color: #11cc00;
+  box-shadow: 0 8px 30px rgba(9, 255, 0, 0.6);
+  transform: scale(1.08);
+}
+
+.champion-card.tier-1:hover {
+  border-color: #b1b1b1;
+  box-shadow: 0 8px 30px rgba(138, 138, 138, 0.6);
+  transform: scale(1.08);
+}
+
+/* .champion-card:hover {
   transform: scale(1.05);
   border-color: #ffd700;
   box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
-}
+} */
 
 .champion-card img {
   width: 100%;
@@ -79,7 +109,6 @@ button:hover{
   height: auto;
   aspect-ratio: 10 / 16;
   border-radius: 10px;
-  border: 2px solid #555;
 }
 
 .champion-name {
@@ -91,7 +120,7 @@ button:hover{
 .champion-tier {
   margin-top: 6px;
   font-size: 16px;
-  color: #ffd700;
+  color: #bebebe;
 }
 
 .champion-id {
