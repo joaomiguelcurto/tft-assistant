@@ -28,7 +28,7 @@ function displayChampions(championsData) {
     // Champ Contentor
     const championCard = document.createElement('div');
     championCard.className = 'champion-card';
-    
+
     // Champ Img
     const img = document.createElement('img');
     img.src = `https://ddragon.leagueoflegends.com/cdn/13.24.1/img/tft-champion/${champion.image.full}`;
@@ -54,6 +54,30 @@ function displayChampions(championsData) {
     championCard.appendChild(name);
     championCard.appendChild(tier);
     championCard.appendChild(id);
+
+    // Cores por Tier
+    switch (champion.tier) {
+        case 5:
+            championCard.style.backgroundColor = 'rgba(39, 36, 3, 0.8)';
+            championCard.classList.add('tier-5');
+            break;
+        case 4:
+            championCard.style.backgroundColor = 'rgba(39, 3, 37, 0.8)';
+            championCard.classList.add('tier-4');
+            break;
+        case 3:
+            championCard.style.backgroundColor = 'rgba(5, 26, 51, 0.8)';
+            championCard.classList.add('tier-3');
+            break;
+        case 2:
+            championCard.style.backgroundColor = 'rgba(3, 36, 8, 0.8)';
+            championCard.classList.add('tier-2');
+            break;
+        default:
+            championCard.style.backgroundColor = 'rgba(30, 30, 50, 0.8)';
+            championCard.classList.add('tier-1');
+            break;
+    }
     
     container.appendChild(championCard);
   });
