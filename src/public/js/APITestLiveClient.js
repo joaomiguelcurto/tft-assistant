@@ -15,7 +15,7 @@ async function GetData() {
     }
 
     if (DATA) {
-        outputDiv.innerHTML = JSON.stringify(DATA)
+        outputDiv.innerHTML = "<pre>" + JSON.stringify(DATA) + "</pre>"
     } else {
         outputDiv.innerHTML = "Error fetching data or data is empty."
     }
