@@ -1,4 +1,4 @@
-# Projeto: Assistente de Overlay para Teamfight Tactics (TFT)
+# Projeto: TFT Assistant
 
 Este projeto visa criar uma ferramenta de assistência em tempo real para o jogo Teamfight Tactics (TFT) da Riot Games. O objetivo principal é melhorar a experiência de jogo e a tomada de decisões de qualquer jogador, através de um display amigável e informativo.
 
