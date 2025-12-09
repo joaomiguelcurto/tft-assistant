@@ -2,12 +2,12 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta": {
-    "name": "Sample App",
-    "author": "Overwolf",
-    "version": "3.0.3",
+    "name": "TFT Assistant",
+    "author": "Miguel Janeiro & Joao Curto",
+    "version": "1.0.0",
     "minimum-overwolf-version": "0.160.0",
-    "description": "An example app for developers new to Overwolf",
-    "dock_button_title": "Sample - TS",
+    "description": "Teamfight Tactics Assistant",
+    "dock_button_title": "TFT Assistant",
     "icon": "icons/IconMouseOver.png",
     "icon_gray": "icons/IconMouseNormal.png",
     "launcher_icon": "icons/desktop-icon.ico",
@@ -15,7 +15,8 @@
   },
   "permissions": [
     "Hotkeys",
-    "GameInfo"
+    "GameInfo",
+    "GameEvents"
   ],
   "data": {
     "start_window": "background",
@@ -26,19 +27,6 @@
         "default": "Ctrl+F"
       }
     },
-    "protocol_override_domains": {
-      "googlesyndication": "http"
-    },
-    "externally_connectable": {
-      "matches": [
-        "http://*.overwolf.com",
-        "https://*.overwolf.com",
-        "https://*.google-analytics.com",
-        "http://*.google-analytics.com",
-        "https://www.googleapis.com"
-      ]
-    },
-    "force_browser": "user",
     "windows": {
       "background": {
         "file": "background.html",
@@ -81,59 +69,14 @@
     },
     "game_targeting": {
       "type": "dedicated",
-      "game_ids": [
-        21216,
-        7764,
-        5426,
-        21634,
-        8032,
-        10844,
-        10906,
-        10826,
-        21404,
-        7212,
-        21640,
-        7314,
-        21626,
-        8954
-      ]
+      "game_ids": [5426]
     },
-    "game_events": [
-      21216,
-      7764,
-      5426,
-      21634,
-      8032,
-      10844,
-      10906,
-      10826,
-      21404,
-      7212,
-      21640,
-      7314,
-      21626,
-      8954
-    ],
+    "game_events": [5426],
     "launch_events": [
       {
         "event": "GameLaunch",
         "event_data": {
-          "game_ids": [
-            21216,
-            7764,
-            5426,
-            21634,
-            8032,
-            10844,
-            10906,
-            10826,
-            21404,
-            7212,
-            21640,
-            7314,
-            21626,
-            8954
-          ]
+          "game_ids": [5426, 10902]
         },
         "start_minimized": true
       }
