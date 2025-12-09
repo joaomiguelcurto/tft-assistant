@@ -1,6 +1,5 @@
 import {
   OWGames,
-  OWGamesEvents,
   OWHotkeys
 } from "@overwolf/overwolf-api-ts";
 
@@ -9,23 +8,41 @@ import { kHotkeys, kWindowNames, kGamesFeatures } from "../consts";
 
 import WindowState = overwolf.windows.WindowStateEx;
 
-// The window displayed in-game while a game is running.
-// It listens to all info events and to the game events listed in the consts.ts file
-// and writes them to the relevant log using <pre> tags.
-// The window also sets up Ctrl+F as the minimize/restore hotkey.
-// Like the background window, it also implements the Singleton design pattern.
+// TFT-specific info type to avoid property errors (dynamic keys)
+interface TFTInfo {
+  match_info?: { game_mode?: string; round_type?: string; local_player_damage?: string; };
+  me?: { gold?: string; health?: string; xp?: string; rank?: string; };
+  store?: { shop_pieces?: string; };
+  board?: { board_pieces?: string; };
+  bench?: { bench_pieces?: string; };
+  carousel?: { carousel_pieces?: string; };
+  roster?: { player_status?: string; };
+}
+
+// All TFT data via onInfoUpdates2(info) - parse.
 class InGame extends AppWindow {
   private static _instance: InGame;
-  private _gameEventsListener: OWGamesEvents;
-  private _eventsLog: HTMLElement;
-  private _infoLog: HTMLElement;
+
+  private async setToggleHotkeyText(): Promise<void> {
+    const hotkeyText = await OWHotkeys.getHotkeyText(kHotkeys.toggle, 5426);
+    const hotkeyElem = document.getElementById('hotkey');
+    if (hotkeyElem) hotkeyElem.textContent = hotkeyText;
+  }
+
+  private async setToggleHotkeyBehavior(): Promise<void> {
+    const toggleInGameWindow = async () => {
+      const state = await this.getWindowState();
+      if (state.window_state === WindowState.NORMAL || state.window_state === WindowState.MAXIMIZED) {
+        this.currWindow.minimize();
+      } else {
+        this.currWindow.restore();
+      }
+    };
+    OWHotkeys.onHotkeyDown(kHotkeys.toggle, toggleInGameWindow);
+  }
 
   private constructor() {
     super(kWindowNames.inGame);
-
-    this._eventsLog = document.getElementById('eventsLog');
-    this._infoLog = document.getElementById('infoLog');
-
     this.setToggleHotkeyBehavior();
     this.setToggleHotkeyText();
   }
@@ -34,104 +51,89 @@ class InGame extends AppWindow {
     if (!this._instance) {
       this._instance = new InGame();
     }
-
     return this._instance;
   }
 
   public async run() {
-    const gameClassId = await this.getCurrentGameClassId();
+    const gameInfo = await OWGames.getRunningGameInfo();
+    if (!gameInfo?.isRunning || gameInfo.id !== 5426) return; // TFT/LOL
 
-    const gameFeatures = kGamesFeatures.get(gameClassId);
+    const features = kGamesFeatures.get(5426)!; // consts.ts
 
-    if (gameFeatures && gameFeatures.length) {
-      this._gameEventsListener = new OWGamesEvents(
-        {
-          onInfoUpdates: this.onInfoUpdates.bind(this),
-          onNewEvents: this.onNewEvents.bind(this)
-        },
-        gameFeatures
-      );
-
-      this._gameEventsListener.start();
-    }
-  }
-
-  private onInfoUpdates(info) {
-    this.logLine(this._infoLog, info, false);
-  }
-
-  // Special events will be highlighted in the event log
-  private onNewEvents(e) {
-    const shouldHighlight = e.events.some(event => {
-      switch (event.name) {
-        case 'kill':
-        case 'death':
-        case 'assist':
-        case 'level':
-        case 'matchStart':
-        case 'match_start':
-        case 'matchEnd':
-        case 'match_end':
-          return true;
+    // TFT Features
+    overwolf.games.events.setRequiredFeatures(
+      features,
+      (featuresInfo) => {
+        console.log('TFT Features Ready:', featuresInfo);
       }
+    );
 
-      return false
+    // Listen for updates (~every second + changes)
+    overwolf.games.events.onInfoUpdates2.addListener(this.onInfoUpdates.bind(this));
+
+    // Errors
+    overwolf.games.events.onError.addListener((error) => {
+      console.error('TFT Events Error:', error);
     });
-    this.logLine(this._eventsLog, e, shouldHighlight);
+
+    // New events (exemple, round_start)
+    overwolf.games.events.onNewEvents.addListener(this.onNewEvents.bind(this));
   }
 
-  // Displays the toggle minimize/restore hotkey in the window header
-  private async setToggleHotkeyText() {
-    const gameClassId = await this.getCurrentGameClassId();
-    const hotkeyText = await OWHotkeys.getHotkeyText(kHotkeys.toggle, gameClassId);
-    const hotkeyElem = document.getElementById('hotkey');
-    hotkeyElem.textContent = hotkeyText;
-  }
+  private onInfoUpdates(info: overwolf.games.events.InfoUpdates2Event) {
+    // Filter: TFT only
+    if ((info.info as TFTInfo)?.match_info?.game_mode !== 'tft') return;
 
-  // Sets toggleInGameWindow as the behavior for the Ctrl+F hotkey
-  private async setToggleHotkeyBehavior() {
-    const toggleInGameWindow = async (
-      hotkeyResult: overwolf.settings.hotkeys.OnPressedEvent
-    ): Promise<void> => {
-      console.log(`pressed hotkey for ${hotkeyResult.name}`);
-      const inGameState = await this.getWindowState();
+    console.log('=== TFT UPDATE ===', info);
 
-      if (inGameState.window_state === WindowState.NORMAL ||
-        inGameState.window_state === WindowState.MAXIMIZED) {
-        this.currWindow.minimize();
-      } else if (inGameState.window_state === WindowState.MINIMIZED ||
-        inGameState.window_state === WindowState.CLOSED) {
-        this.currWindow.restore();
-      }
+    const tftInfo = info.info as TFTInfo;
+
+    // Player stats
+    console.log('Gold:', tftInfo.me?.gold);
+    console.log('Health:', tftInfo.me?.health);
+    console.log('Level/XP:', tftInfo.me?.xp ? JSON.parse(tftInfo.me.xp) : null);
+    console.log('Rank:', tftInfo.me?.rank); // Accurate post-death/win
+
+    // Match/round
+    console.log('Round:', tftInfo.match_info?.round_type);
+    console.log('Damage:', tftInfo.match_info?.local_player_damage);
+
+    // Shop (array after parse)
+    if (tftInfo.store?.shop_pieces) {
+      const shop = JSON.parse(tftInfo.store.shop_pieces);
+      console.log('Shop units:', Object.values(shop));
     }
 
-    OWHotkeys.onHotkeyDown(kHotkeys.toggle, toggleInGameWindow);
-  }
-
-  // Appends a new line to the specified log
-  private logLine(log: HTMLElement, data, highlight) {
-    const line = document.createElement('pre');
-    line.textContent = JSON.stringify(data);
-
-    if (highlight) {
-      line.className = 'highlight';
+    // Board (your units + positions/items)
+    if (tftInfo.board?.board_pieces) {
+      const board = JSON.parse(tftInfo.board.board_pieces);
+      console.log('Board units:', Object.values(board)); // example, {name: 'TFT10_KogMaw', level: '2', item_1: '...'}
     }
 
-    // Check if scroll is near bottom
-    const shouldAutoScroll =
-      log.scrollTop + log.offsetHeight >= log.scrollHeight - 10;
-
-    log.appendChild(line);
-
-    if (shouldAutoScroll) {
-      log.scrollTop = log.scrollHeight;
+    // Bench (inventory)
+    if (tftInfo.bench?.bench_pieces) {
+      const bench = JSON.parse(tftInfo.bench.bench_pieces);
+      console.log('Bench:', Object.values(bench));
     }
+
+    // Carousel
+    if (tftInfo.carousel?.carousel_pieces) {
+      const carousel = JSON.parse(tftInfo.carousel.carousel_pieces);
+      console.log('Carousel:', Object.values(carousel));
+    }
+
+    // Roster (all players)
+    if (tftInfo.roster?.player_status) {
+      const roster = JSON.parse(tftInfo.roster.player_status);
+      console.log('Roster health/rank:', roster);
+    }
+
+    // example, document.getElementById('gold').textContent = tftInfo.me?.gold;
+    // Or: overwolf.windows.sendMessage('desktop', {type: 'tft_update', data: info});
   }
 
-  private async getCurrentGameClassId(): Promise<number | null> {
-    const info = await OWGames.getRunningGameInfo();
-
-    return (info && info.isRunning && info.classId) ? info.classId : null;
+  private onNewEvents(events: overwolf.games.events.NewGameEvents) {
+    console.log('TFT Events:', events.events); // e.g., [{name: 'round_start', data: 'PVP'}]
   }
 }
 

@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "none",
+    "target": "ES2020",
+    "module": "ESNext",
     "sourceMap": true,
     "outDir": "./dist",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "removeComments": true,
     "strict": true,
     "noImplicitAny": false,
