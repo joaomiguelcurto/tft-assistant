@@ -55,10 +55,20 @@ class InGame extends AppWindow {
   }
 
   public async run() {
+    console.log('InGame.run() starting...');
+    
     const gameInfo = await OWGames.getRunningGameInfo();
-    if (!gameInfo?.isRunning || gameInfo.id !== 5426) return; // TFT/LOL
+    console.log('Game Info:', gameInfo);
+    
+    if (!gameInfo?.isRunning || gameInfo.id !== 5426) {
+      console.log('TFT not running or wrong game ID');
+      return;
+    }
 
+    console.log('TFT detected, setting up listeners...');
+    
     const features = kGamesFeatures.get(5426)!; // consts.ts
+    console.log('Features to request:', features);
 
     // TFT Features
     overwolf.games.events.setRequiredFeatures(
@@ -78,62 +88,108 @@ class InGame extends AppWindow {
 
     // New events (exemple, round_start)
     overwolf.games.events.onNewEvents.addListener(this.onNewEvents.bind(this));
+    
+    console.log('All listeners registered');
   }
 
   private onInfoUpdates(info: overwolf.games.events.InfoUpdates2Event) {
-    // Filter: TFT only
-    if ((info.info as TFTInfo)?.match_info?.game_mode !== 'tft') return;
-
-    console.log('=== TFT UPDATE ===', info);
-
     const tftInfo = info.info as TFTInfo;
+    
+    // Log everything received (for debugging)
+    console.log('=== RAW INFO UPDATE ===', info);
 
-    // Player stats
-    console.log('Gold:', tftInfo.me?.gold);
-    console.log('Health:', tftInfo.me?.health);
-    console.log('Level/XP:', tftInfo.me?.xp ? JSON.parse(tftInfo.me.xp) : null);
-    console.log('Rank:', tftInfo.me?.rank); // Accurate post-death/win
+    // Player stats (Gold, Health, XP, Rank)
+    if (tftInfo.me) {
+      if (tftInfo.me.gold !== undefined) {
+        console.log('Gold:', tftInfo.me.gold);
+      }
+      if (tftInfo.me.health !== undefined) {
+        console.log('Health:', tftInfo.me.health);
+      }
+      if (tftInfo.me.xp) {
+        try {
+          const xpData = JSON.parse(tftInfo.me.xp);
+          console.log('Level/XP:', xpData);
+        } catch (e) {
+          console.log('XP (raw):', tftInfo.me.xp);
+        }
+      }
+      if (tftInfo.me.rank !== undefined) {
+        console.log('Rank:', tftInfo.me.rank);
+      }
+    }
 
-    // Match/round
-    console.log('Round:', tftInfo.match_info?.round_type);
-    console.log('Damage:', tftInfo.match_info?.local_player_damage);
+    // Match/round info
+    if (tftInfo.match_info) {
+      if (tftInfo.match_info.game_mode) {
+        console.log('Game Mode:', tftInfo.match_info.game_mode);
+      }
+      if (tftInfo.match_info.round_type) {
+        console.log('Round Type:', tftInfo.match_info.round_type);
+      }
+      if (tftInfo.match_info.local_player_damage) {
+        console.log('Damage:', tftInfo.match_info.local_player_damage);
+      }
+    }
 
     // Shop (array after parse)
     if (tftInfo.store?.shop_pieces) {
-      const shop = JSON.parse(tftInfo.store.shop_pieces);
-      console.log('Shop units:', Object.values(shop));
+      try {
+        const shop = JSON.parse(tftInfo.store.shop_pieces);
+        console.log('Shop units:', Object.values(shop));
+      } catch (e) {
+        console.error('Failed to parse shop:', e);
+      }
     }
 
     // Board (your units + positions/items)
     if (tftInfo.board?.board_pieces) {
-      const board = JSON.parse(tftInfo.board.board_pieces);
-      console.log('Board units:', Object.values(board)); // example, {name: 'TFT10_KogMaw', level: '2', item_1: '...'}
+      try {
+        const board = JSON.parse(tftInfo.board.board_pieces);
+        console.log('Board units:', Object.values(board));
+      } catch (e) {
+        console.error('Failed to parse board:', e);
+      }
     }
 
     // Bench (inventory)
     if (tftInfo.bench?.bench_pieces) {
-      const bench = JSON.parse(tftInfo.bench.bench_pieces);
-      console.log('Bench:', Object.values(bench));
+      try {
+        const bench = JSON.parse(tftInfo.bench.bench_pieces);
+        console.log('Bench:', Object.values(bench));
+      } catch (e) {
+        console.error('Failed to parse bench:', e);
+      }
     }
 
     // Carousel
     if (tftInfo.carousel?.carousel_pieces) {
-      const carousel = JSON.parse(tftInfo.carousel.carousel_pieces);
-      console.log('Carousel:', Object.values(carousel));
+      try {
+        const carousel = JSON.parse(tftInfo.carousel.carousel_pieces);
+        console.log('Carousel:', Object.values(carousel));
+      } catch (e) {
+        console.error('Failed to parse carousel:', e);
+      }
     }
 
     // Roster (all players)
     if (tftInfo.roster?.player_status) {
-      const roster = JSON.parse(tftInfo.roster.player_status);
-      console.log('Roster health/rank:', roster);
+      try {
+        const roster = JSON.parse(tftInfo.roster.player_status);
+        console.log('Roster (all players):', roster);
+      } catch (e) {
+        console.error('Failed to parse roster:', e);
+      }
     }
 
-    // example, document.getElementById('gold').textContent = tftInfo.me?.gold;
-    // Or: overwolf.windows.sendMessage('desktop', {type: 'tft_update', data: info});
+    console.log('─────────────────────────────');
   }
 
   private onNewEvents(events: overwolf.games.events.NewGameEvents) {
-    console.log('TFT Events:', events.events); // e.g., [{name: 'round_start', data: 'PVP'}]
+    console.log('TFT Events:', events.events);
+    events.events.forEach(event => {
+      console.log(`  Event: ${event.name}:`, event.data);
+    });
   }
 }
 
