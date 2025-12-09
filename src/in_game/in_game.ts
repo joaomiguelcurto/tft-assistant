@@ -59,11 +59,6 @@ class InGame extends AppWindow {
     
     const gameInfo = await OWGames.getRunningGameInfo();
     console.log('Game Info:', gameInfo);
-    
-    if (!gameInfo?.isRunning || gameInfo.id !== 5426) {
-      console.log('TFT not running or wrong game ID');
-      return;
-    }
 
     console.log('TFT detected, setting up listeners...');
     
@@ -94,6 +89,9 @@ class InGame extends AppWindow {
 
   private onInfoUpdates(info: overwolf.games.events.InfoUpdates2Event) {
     const tftInfo = info.info as TFTInfo;
+
+    // ANTI-SPAM NA
+    if (info.feature === 'live_client_data') return;
     
     // Log everything received (for debugging)
     console.log('=== RAW INFO UPDATE ===', info);
@@ -120,6 +118,7 @@ class InGame extends AppWindow {
     }
 
     // Match/round info
+    // SPAM CONSOLA
     if (tftInfo.match_info) {
       if (tftInfo.match_info.game_mode) {
         console.log('Game Mode:', tftInfo.match_info.game_mode);
