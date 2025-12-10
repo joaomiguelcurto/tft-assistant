@@ -1,7 +1,4 @@
-import {
-  OWGames,
-  OWHotkeys
-} from "@overwolf/overwolf-api-ts";
+import { OWGames, OWHotkeys } from "@overwolf/overwolf-api-ts";
 
 import { AppWindow } from "../AppWindow";
 import { kHotkeys, kWindowNames, kGamesFeatures } from "../consts";
@@ -10,13 +7,17 @@ import WindowState = overwolf.windows.WindowStateEx;
 
 // TFT-specific info type to avoid property errors (dynamic keys)
 interface TFTInfo {
-  match_info?: { game_mode?: string; round_type?: string; local_player_damage?: string; };
-  me?: { gold?: string; health?: string; xp?: string; rank?: string; };
-  store?: { shop_pieces?: string; };
-  board?: { board_pieces?: string; };
-  bench?: { bench_pieces?: string; };
-  carousel?: { carousel_pieces?: string; };
-  roster?: { player_status?: string; };
+  match_info?: {
+    game_mode?: string;
+    round_type?: string;
+    local_player_damage?: string;
+  };
+  me?: { gold?: string; health?: string; xp?: string; rank?: string };
+  store?: { shop_pieces?: string };
+  board?: { board_pieces?: string };
+  bench?: { bench_pieces?: string };
+  carousel?: { carousel_pieces?: string };
+  roster?: { player_status?: string };
 }
 
 // All TFT data via onInfoUpdates2(info) - parse.
@@ -25,14 +26,17 @@ class InGame extends AppWindow {
 
   private async setToggleHotkeyText(): Promise<void> {
     const hotkeyText = await OWHotkeys.getHotkeyText(kHotkeys.toggle, 5426);
-    const hotkeyElem = document.getElementById('hotkey');
+    const hotkeyElem = document.getElementById("hotkey");
     if (hotkeyElem) hotkeyElem.textContent = hotkeyText;
   }
 
   private async setToggleHotkeyBehavior(): Promise<void> {
     const toggleInGameWindow = async () => {
       const state = await this.getWindowState();
-      if (state.window_state === WindowState.NORMAL || state.window_state === WindowState.MAXIMIZED) {
+      if (
+        state.window_state === WindowState.NORMAL ||
+        state.window_state === WindowState.MAXIMIZED
+      ) {
         this.currWindow.minimize();
       } else {
         this.currWindow.restore();
@@ -55,65 +59,98 @@ class InGame extends AppWindow {
   }
 
   public async run() {
-    console.log('InGame.run() starting...');
-    
-    const gameInfo = await OWGames.getRunningGameInfo();
-    console.log('Game Info:', gameInfo);
+    console.log("InGame.run() starting...");
 
-    console.log('TFT detected, setting up listeners...');
-    
+    const gameInfo = await OWGames.getRunningGameInfo();
+    console.log("Game Info:", gameInfo);
+
+    console.log('Waiting for game to fully load...')
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
+    console.log("TFT detected, setting up listeners...");
+
     const features = kGamesFeatures.get(5426)!; // consts.ts
-    console.log('Features to request:', features);
+    console.log("Features to request:", features);
 
     // TFT Features
-    overwolf.games.events.setRequiredFeatures(
-      features,
-      (featuresInfo) => {
-        console.log('TFT Features Ready:', featuresInfo);
+    overwolf.games.events.setRequiredFeatures(features, (result) => {
+      console.log("setRequiredFeatures result:", result);
+
+      if (result.success) {
+        console.log(
+          "Features enabled successfully:",
+          result.supportedFeatures
+        );
+      } else {
+        console.error("Failed to enable features:", result.error);
       }
-    );
+    });
 
     // Listen for updates (~every second + changes)
-    overwolf.games.events.onInfoUpdates2.addListener(this.onInfoUpdates.bind(this));
+    overwolf.games.events.onInfoUpdates2.addListener(
+      this.onInfoUpdates.bind(this)
+    );
 
     // Errors
     overwolf.games.events.onError.addListener((error) => {
-      console.error('TFT Events Error:', error);
+      console.error("TFT Events Error:", error);
     });
 
     // New events (exemple, round_start)
     overwolf.games.events.onNewEvents.addListener(this.onNewEvents.bind(this));
-    
-    console.log('All listeners registered');
+
+    console.log("All listeners registered");
+  }
+
+  private logToUI(logTo: HTMLElement, message: string, color: string) {
+    if(!logTo) return // Make sure it exists
+
+    const entry = document.createElement('div');
+    const timestamp = new Date().toLocaleTimeString();
+    entry.textContent = `[${timestamp}] ${message}`;
+
+    if (color !== "default") {
+      entry.style.color = color;
+    }
+
+    logTo.appendChild(entry);
+    // Auto-scroll to bottom
+    logTo.scrollTop = logTo.scrollHeight;
   }
 
   private onInfoUpdates(info: overwolf.games.events.InfoUpdates2Event) {
     const tftInfo = info.info as TFTInfo;
+    // Get element to display info (UI)
+    const infoLog = document.getElementById('infoLog');
+    const eventsLog = document.getElementById('eventsLog');
 
-    // ANTI-SPAM NA
-    if (info.feature === 'live_client_data') return;
-    
+    // ANTI-SPAM NA CONSOLA 
+    // --------------- TEMPORARIO ---------------
+    if (info.feature === "live_client_data") return;
+
     // Log everything received (for debugging)
-    console.log('=== RAW INFO UPDATE ===', info);
+    console.log("RAW INFO UPDATE", info);
 
     // Player stats (Gold, Health, XP, Rank)
     if (tftInfo.me) {
       if (tftInfo.me.gold !== undefined) {
-        console.log('Gold:', tftInfo.me.gold);
+        console.log("Gold:", tftInfo.me.gold);
+        // Teste LogToUI
+        this.logToUI(infoLog, "Gold: " + tftInfo.me.gold, "#FFD700")
       }
       if (tftInfo.me.health !== undefined) {
-        console.log('Health:', tftInfo.me.health);
+        console.log("Health:", tftInfo.me.health);
       }
       if (tftInfo.me.xp) {
         try {
           const xpData = JSON.parse(tftInfo.me.xp);
-          console.log('Level/XP:', xpData);
+          console.log("Level/XP:", xpData);
         } catch (e) {
-          console.log('XP (raw):', tftInfo.me.xp);
+          console.log("XP (raw):", tftInfo.me.xp);
         }
       }
       if (tftInfo.me.rank !== undefined) {
-        console.log('Rank:', tftInfo.me.rank);
+        console.log("Rank:", tftInfo.me.rank);
       }
     }
 
@@ -121,13 +158,13 @@ class InGame extends AppWindow {
     // SPAM CONSOLA
     if (tftInfo.match_info) {
       if (tftInfo.match_info.game_mode) {
-        console.log('Game Mode:', tftInfo.match_info.game_mode);
+        console.log("Game Mode:", tftInfo.match_info.game_mode);
       }
       if (tftInfo.match_info.round_type) {
-        console.log('Round Type:', tftInfo.match_info.round_type);
+        console.log("Round Type:", tftInfo.match_info.round_type);
       }
       if (tftInfo.match_info.local_player_damage) {
-        console.log('Damage:', tftInfo.match_info.local_player_damage);
+        console.log("Damage:", tftInfo.match_info.local_player_damage);
       }
     }
 
@@ -135,29 +172,33 @@ class InGame extends AppWindow {
     if (tftInfo.store?.shop_pieces) {
       try {
         const shop = JSON.parse(tftInfo.store.shop_pieces);
-        console.log('Shop units:', Object.values(shop));
+        console.log("Shop units:", Object.values(shop));
       } catch (e) {
-        console.error('Failed to parse shop:', e);
+        console.error("Failed to parse shop:", e);
       }
     }
 
     // Board (your units + positions/items)
     if (tftInfo.board?.board_pieces) {
       try {
-        const board = JSON.parse(tftInfo.board.board_pieces);
-        console.log('Board units:', Object.values(board));
+        const board_champions = JSON.parse(tftInfo.board.board_pieces);
+        const board_pieces = JSON.parse(tftInfo.board.board_pieces);
+        console.log("Board units:", Object.values(board_champions));
+        console.log("Board positions:", board_pieces);
       } catch (e) {
-        console.error('Failed to parse board:', e);
+        console.error("Failed to parse board:", e);
       }
     }
 
     // Bench (inventory)
     if (tftInfo.bench?.bench_pieces) {
       try {
-        const bench = JSON.parse(tftInfo.bench.bench_pieces);
-        console.log('Bench:', Object.values(bench));
+        const bench_champions = JSON.parse(tftInfo.bench.bench_pieces);
+        const bench_pieces = JSON.parse(tftInfo.bench.bench_pieces);
+        console.log("Bench units:", Object.values(bench_champions));
+        console.log("Bench positions:", bench_pieces);
       } catch (e) {
-        console.error('Failed to parse bench:', e);
+        console.error("Failed to parse bench:", e);
       }
     }
 
@@ -165,9 +206,9 @@ class InGame extends AppWindow {
     if (tftInfo.carousel?.carousel_pieces) {
       try {
         const carousel = JSON.parse(tftInfo.carousel.carousel_pieces);
-        console.log('Carousel:', Object.values(carousel));
+        console.log("Carousel:", Object.values(carousel));
       } catch (e) {
-        console.error('Failed to parse carousel:', e);
+        console.error("Failed to parse carousel:", e);
       }
     }
 
@@ -175,18 +216,18 @@ class InGame extends AppWindow {
     if (tftInfo.roster?.player_status) {
       try {
         const roster = JSON.parse(tftInfo.roster.player_status);
-        console.log('Roster (all players):', roster);
+        console.log("Roster (all players):", roster);
       } catch (e) {
-        console.error('Failed to parse roster:', e);
+        console.error("Failed to parse roster:", e);
       }
     }
 
-    console.log('─────────────────────────────');
+    console.log("--------------------------");
   }
 
   private onNewEvents(events: overwolf.games.events.NewGameEvents) {
-    console.log('TFT Events:', events.events);
-    events.events.forEach(event => {
+    console.log("TFT Events:", events.events);
+    events.events.forEach((event) => {
       console.log(`  Event: ${event.name}:`, event.data);
     });
   }
