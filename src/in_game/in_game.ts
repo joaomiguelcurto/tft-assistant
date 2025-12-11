@@ -29,7 +29,7 @@ class InGame extends AppWindow {
     const hotkeyElem = document.getElementById("hotkey");
     if (hotkeyElem) hotkeyElem.textContent = hotkeyText;
   }
-
+  
   private async setToggleHotkeyBehavior(): Promise<void> {
     const toggleInGameWindow = async () => {
       const state = await this.getWindowState();
@@ -49,6 +49,7 @@ class InGame extends AppWindow {
     super(kWindowNames.inGame);
     this.setToggleHotkeyBehavior();
     this.setToggleHotkeyText();
+    this.setupDebugLink();
   }
 
   public static instance() {
@@ -56,6 +57,29 @@ class InGame extends AppWindow {
       this._instance = new InGame();
     }
     return this._instance;
+  }
+
+  private setupDebugLink(): void {
+    const debugLink = document.getElementById('debugLink');
+    if (debugLink) {
+      debugLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log("Debug link clicked!");
+        
+        // Open debug window using Overwolf API
+        overwolf.windows.obtainDeclaredWindow('debug', result => {
+          if (result.success) {
+            console.log("Opening debug window...");
+            overwolf.windows.restore(result.window.id);
+          } else {
+            console.error("Failed to open debug window:", result);
+          }
+        });
+      });
+      console.log("Debug link listener attached");
+    } else {
+      console.error("Debug link element not found!");
+    }
   }
 
   public async run() {
@@ -102,7 +126,6 @@ class InGame extends AppWindow {
     console.log("All listeners registered");
   }
 
-  // TODO: Adicionar botao UI para dar force refresh
   private forceRefreshGameData(): void {
   overwolf.games.events.getInfo((info) => {
     if (info.success && info.res) {
@@ -246,7 +269,7 @@ class InGame extends AppWindow {
       try {
         const roster = JSON.parse(tftInfo.roster.player_status);
         console.log("Roster (all players):", roster);
-        this.logToUI(infoLog, "Roster (all players): " + roster, "rgba(73, 121, 170, 1)")
+        this.logToUI(infoLog, "Roster (all players): " + roster, "#4979aaff")
       } catch (e) {
         console.error("Failed to parse roster:", e);
         this.logToUI(infoLog, "Failed to parse roster: " + e, "#ff0000ff");

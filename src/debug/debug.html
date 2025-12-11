@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../css/general.css" />
+  <link rel="stylesheet" href="../../css/header.css" />
+  <title>Debug</title>
+</head>
+<body>
+  <!-- <header id="header" class="app-header">
+  </header> -->
+
+  <main>
+    <h1>This is your new page!</h1>
+    <button id="backButton">Go Back</button>
+  </main>
+
+  <script>
+    // Window controls
+    document.getElementById('minimizeButton').addEventListener('click', () => {
+      overwolf.windows.getCurrentWindow(result => {
+        overwolf.windows.minimize(result.window.id);
+      });
+    });
+
+    document.getElementById('closeButton').addEventListener('click', () => {
+      overwolf.windows.getCurrentWindow(result => {
+        overwolf.windows.close(result.window.id);
+      });
+    });
+
+    // Back button
+    document.getElementById('backButton').addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
