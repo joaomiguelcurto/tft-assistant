@@ -5,7 +5,6 @@
   <link rel="stylesheet" href="../../css/general.css" />
   <link rel="stylesheet" href="../../css/header.css" />
   <link rel="stylesheet" href="../../css/ingame.css" />
-  <link rel="stylesheet" href="../../css/modal.css" />
   <title>Overwolf Sample App - In-Game page</title>
 </head>
 <body class="in-game">
@@ -27,23 +26,11 @@
 
   <!-- --------------------------------- Main -------------------------------- -->
   <main>
-    <div id="logs">
-      <a href="Reload">Reload</a>
-      <div id="events" class="logColumn">
-        <h1>Game Events</h1>
-        <div id="eventsLog" class="dataText">
-        </div>
-      </div>
-      <div id="infoUpdates" class="logColumn">
-        <h1>Info Updates</h1>
-        <div id="infoLog" class="dataText"></div>
-      </div>
-    </div>
-    <div id="other">
-      <h1>Real-time Game Data</h1>
-      <p id="infoParagraph">
-        Info Paragraph <a href="#" id="debugLink">debug</a>
-      </p>
+    <div style="display: flex; align-items: center; justify-content: center; height: 100%; flex-direction: column;">
+      <h2>TFT Overwolf App</h2>
+      <button id="openDebugButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+        Open Debug Window
+      </button>
     </div>
   </main>
 

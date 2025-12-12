@@ -20,7 +20,6 @@ interface TFTInfo {
   roster?: { player_status?: string };
 }
 
-// All TFT data via onInfoUpdates2(info) - parse.
 class InGame extends AppWindow {
   private static _instance: InGame;
 
@@ -49,7 +48,7 @@ class InGame extends AppWindow {
     super(kWindowNames.inGame);
     this.setToggleHotkeyBehavior();
     this.setToggleHotkeyText();
-    this.setupDebugLink();
+    this.setupDebugButton();
   }
 
   public static instance() {
@@ -59,26 +58,26 @@ class InGame extends AppWindow {
     return this._instance;
   }
 
-  private setupDebugLink(): void {
-    const debugLink = document.getElementById('debugLink');
-    if (debugLink) {
-      debugLink.addEventListener('click', (e) => {
+  private setupDebugButton(): void {
+    const debugButton = document.getElementById('openDebugButton');
+    if (debugButton) {
+      debugButton.addEventListener('click', (e) => {
         e.preventDefault();
-        console.log("Debug link clicked!");
+        console.log("Opening debug window...");
         
         // Open debug window using Overwolf API
         overwolf.windows.obtainDeclaredWindow('debug', result => {
           if (result.success) {
-            console.log("Opening debug window...");
+            console.log("Debug window opened successfully");
             overwolf.windows.restore(result.window.id);
           } else {
             console.error("Failed to open debug window:", result);
           }
         });
       });
-      console.log("Debug link listener attached");
+      console.log("Debug button listener attached");
     } else {
-      console.error("Debug link element not found!");
+      console.error("Debug button element not found!");
     }
   }
 
@@ -126,87 +125,47 @@ class InGame extends AppWindow {
     console.log("All listeners registered");
   }
 
-  private forceRefreshGameData(): void {
-  overwolf.games.events.getInfo((info) => {
-    if (info.success && info.res) {
-      console.log("Manually refreshed game data:", info.res);
-      this.onInfoUpdates({ info: info.res, feature: "manual_refresh" });
-    } else {
-      console.error("Failed to refresh game data:", info);
-    }
-  });
-}
-
-  private logToUI(logTo: HTMLElement, message: string, color: string) {
-    if(!logTo) return // Make sure it exists
-
-    const entry = document.createElement('div');
-    const timestamp = new Date().toLocaleTimeString();
-    entry.textContent = `[${timestamp}] ${message}`;
-
-    if (color !== "default") {
-      entry.style.color = color;
-    }
-
-    logTo.appendChild(entry);
-    // Auto-scroll to bottom
-    logTo.scrollTop = logTo.scrollHeight;
-  }
-
   private onInfoUpdates(info: overwolf.games.events.InfoUpdates2Event) {
     const tftInfo = info.info as TFTInfo;
-    // Get element to display info (UI)
-    const infoLog = document.getElementById('infoLog');
-    const eventsLog = document.getElementById('eventsLog');
 
     // ANTI-SPAM NA CONSOLA 
     // --------------- TEMPORARIO ---------------
     if (info.feature === "live_client_data") return;
 
-    // Log everything received (for debugging)
+    // Log everything received (for debugging) - not displaying to UI
     console.log("RAW INFO UPDATE", info);
 
     // Player stats (Gold, Health, XP, Rank)
     if (tftInfo.me) {
       if (tftInfo.me.gold !== undefined) {
         console.log("Gold:", tftInfo.me.gold);
-        this.logToUI(infoLog, "Gold: " + tftInfo.me.gold, "#FFD700");
       }
       if (tftInfo.me.health !== undefined) {
         console.log("Health:", tftInfo.me.health);
-        this.logToUI(infoLog, "Health: " + tftInfo.me.health, "#ff8585ff");
       }
       if (tftInfo.me.xp) {
         try {
           const xpData = JSON.parse(tftInfo.me.xp);
           console.log("Level/XP:", xpData);
-          this.logToUI(infoLog, "Level/XP: " + xpData, "#03ffbcff");
         } catch (e) {
           console.log("XP (raw):", tftInfo.me.xp);
-          this.logToUI(infoLog, "XP (raw): " + tftInfo.me.xp, "#03ffbcff");
         }
       }
       if (tftInfo.me.rank !== undefined) {
         console.log("Rank:", tftInfo.me.rank);
-        this.logToUI(infoLog, "Rank: " + tftInfo.me.rank, "#cd9bcdff");
-      
       }
     }
 
     // Match/round info
-    // SPAM CONSOLA
     if (tftInfo.match_info) {
       if (tftInfo.match_info.game_mode) {
         console.log("Game Mode:", tftInfo.match_info.game_mode);
-        this.logToUI(eventsLog, "Game Mode: " + tftInfo.match_info.game_mode, "#b42457ff)");
       }
       if (tftInfo.match_info.round_type) {
         console.log("Round Type:", tftInfo.match_info.round_type);
-        this.logToUI(eventsLog, "Round Type: " + tftInfo.match_info.round_type, "#6585edff");
       }
       if (tftInfo.match_info.local_player_damage) {
         console.log("Damage:", tftInfo.match_info.local_player_damage);
-        this.logToUI(eventsLog, "Damage: " + tftInfo.match_info.local_player_damage, "#fe2929ff");
       }
     }
 
@@ -215,10 +174,8 @@ class InGame extends AppWindow {
       try {
         const shop = JSON.parse(tftInfo.store.shop_pieces);
         console.log("Shop units:", Object.values(shop));
-        this.logToUI(infoLog, "Shop units: " + Object.values(shop), "#08d951ff");
       } catch (e) {
         console.error("Failed to parse shop:", e);
-        this.logToUI(infoLog, "Failed to parse shop: " + e, "#ff0000ff");
       }
     }
 
@@ -228,12 +185,9 @@ class InGame extends AppWindow {
         const board_champions = JSON.parse(tftInfo.board.board_pieces);
         const board_pieces = JSON.parse(tftInfo.board.board_pieces);
         console.log("Board units:", Object.values(board_champions));
-        this.logToUI(infoLog, "Board units: " + Object.values(board_champions), "#4a9ab5ff");
         console.log("Board positions:", board_pieces);
-        this.logToUI(infoLog, "Board positions: " + board_pieces, "#45c2ecff");
       } catch (e) {
         console.error("Failed to parse board:", e);
-        this.logToUI(infoLog, "Failed to parse board: " + e, "#ff0000ff");
       }
     }
 
@@ -243,12 +197,9 @@ class InGame extends AppWindow {
         const bench_champions = JSON.parse(tftInfo.bench.bench_pieces);
         const bench_pieces = JSON.parse(tftInfo.bench.bench_pieces);
         console.log("Bench units:", Object.values(bench_champions));
-        this.logToUI(infoLog, "Bench units: " + Object.values(bench_champions), "#40e160ff");
         console.log("Bench positions:", bench_pieces);
-        this.logToUI(infoLog, "Bench positions: " + bench_pieces, "#48a15aff");
       } catch (e) {
         console.error("Failed to parse bench:", e);
-        this.logToUI(infoLog, "Failed to parse bench: " + e, "#ff0000ff");
       }
     }
 
@@ -257,10 +208,8 @@ class InGame extends AppWindow {
       try {
         const carousel = JSON.parse(tftInfo.carousel.carousel_pieces);
         console.log("Carousel:", Object.values(carousel));
-        this.logToUI(infoLog, "Carousel: " + Object.values(carousel), "#009a21ff")
       } catch (e) {
         console.error("Failed to parse carousel:", e);
-        this.logToUI(infoLog, "Failed to parse carousel: " + e, "#ff0000ff");
       }
     }
 
@@ -269,10 +218,8 @@ class InGame extends AppWindow {
       try {
         const roster = JSON.parse(tftInfo.roster.player_status);
         console.log("Roster (all players):", roster);
-        this.logToUI(infoLog, "Roster (all players): " + roster, "#4979aaff")
       } catch (e) {
         console.error("Failed to parse roster:", e);
-        this.logToUI(infoLog, "Failed to parse roster: " + e, "#ff0000ff");
       }
     }
 

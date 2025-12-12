@@ -68,8 +68,19 @@
       },
       "debug": {
         "file": "debug.html",
+        "resizable": true,
+        "transparent": true,
+        "override_on_update": true,
         "desktop_only": false,
-        "in_game_only": false
+        "in_game_only": false,
+        "size": {
+          "width": 1212,
+          "height": 699
+        },
+        "min_size": {
+          "width": 1212,
+          "height": 699
+        }
       }
     },
     "game_targeting": {
