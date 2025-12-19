@@ -10,7 +10,7 @@
     "noImplicitAny": false,
     "strictNullChecks": false,
     "types": [
-      "@overwolf/types"
+      "@overwolf/types", "node" 
     ],
     "rootDirs": [
       "./src"
