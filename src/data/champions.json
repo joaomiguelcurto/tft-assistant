@@ -1,0 +1,1018 @@
+[
+  {
+    "name": "Tristana",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_tristana/skins/base/images/tft16_tristana_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_tristana/skins/base/images/tft16_tristana_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_tristana/hud/tft16_tristana_square.tft_set16.png",
+    "traits": [
+      "Yordle",
+      "Gunslinger"
+    ]
+  },
+  {
+    "name": "Lulu",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lulu/skins/base/images/tft16_lulu_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lulu/skins/base/images/tft16_lulu_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lulu/hud/tft16_lulu_square.tft_set16.png",
+    "traits": [
+      "Yordle",
+      "Arcanist"
+    ]
+  },
+  {
+    "name": "Teemo",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_teemo/skins/base/images/tft16_teemo_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_teemo/skins/base/images/tft16_teemo_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_teemo/hud/tft16_teemo_square.tft_set16.png",
+    "traits": [
+      "Yordle",
+      "Longshot"
+    ]
+  },
+  {
+    "name": "Rumble",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_rumble/skins/base/images/tft16_rumble_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_rumble/skins/base/images/tft16_rumble_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_rumble/hud/tft16_rumble_square.tft_set16.png",
+    "traits": [
+      "Yordle",
+      "Defender"
+    ]
+  },
+  {
+    "name": "Nautilus",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_nautilus/skins/base/images/tft16_nautilus_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_nautilus/skins/base/images/tft16_nautilus_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_nautilus/hud/tft16_nautilus_square.tft_set16.png",
+    "traits": [
+      "Bilgewater",
+      "Juggernaut",
+      "Warden"
+    ]
+  },
+  {
+    "name": "Twisted Fate",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_twistedfate/skins/base/images/tft16_twistedfate_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_twistedfate/skins/base/images/tft16_twistedfate_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_twistedfate/hud/tft16_twistedfate_square.tft_set16.png",
+    "traits": [
+      "Bilgewater",
+      "Quickstriker"
+    ]
+  },
+  {
+    "name": "Gangplank",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_gangplank/skins/base/images/tft16_gangplank_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_gangplank/skins/base/images/tft16_gangplank_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_gangplank/hud/tft16_gangplank_square.tft_set16.png",
+    "traits": [
+      "Bilgewater",
+      "Slayer",
+      "Vanquisher"
+    ]
+  },
+  {
+    "name": "Illaoi",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_illaoi/skins/base/images/tft16_illaoi_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_illaoi/skins/base/images/tft16_illaoi_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_illaoi/hud/tft16_illaoi_square.tft_set16.png",
+    "traits": [
+      "Bilgewater",
+      "Bruiser"
+    ]
+  },
+  {
+    "name": "Miss Fortune",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_missfortune/skins/base/images/tft16_missfortune_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_missfortune/skins/base/images/tft16_missfortune_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_missfortune/hud/tft16_missfortune_square.tft_set16.png",
+    "traits": [
+      "Bilgewater",
+      "Gunslinger"
+    ]
+  },
+  {
+    "name": "Sion",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sion/skins/base/images/tft16_sion_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sion/skins/base/images/tft16_sion_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sion/hud/tft16_sion_square.tft_set16.png",
+    "traits": [
+      "Noxus",
+      "Bruiser"
+    ]
+  },
+  {
+    "name": "Briar",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_briar/skins/base/images/tft16_briar_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_briar/skins/base/images/tft16_briar_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_briar/hud/tft16_briar_square.tft_set16.png",
+    "traits": [
+      "Noxus",
+      "Slayer",
+      "Juggernaut"
+    ]
+  },
+  {
+    "name": "Draven",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_draven/skins/base/images/tft16_draven_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_draven/skins/base/images/tft16_draven_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_draven/hud/tft16_draven_square.tft_set16.png",
+    "traits": [
+      "Noxus",
+      "Quickstriker"
+    ]
+  },
+  {
+    "name": "Ambessa",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ambessa/skins/base/images/tft16_ambessa_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ambessa/skins/base/images/tft16_ambessa_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ambessa/hud/tft16_ambessa_square.tft_set16.png",
+    "traits": [
+      "Noxus",
+      "Vanquisher"
+    ]
+  },
+  {
+    "name": "Zoe",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_zoe/skins/base/images/tft16_zoe_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_zoe/skins/base/images/tft16_zoe_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_zoe/hud/tft16_zoe_square.tft_set16.png",
+    "traits": [
+      "Targon"
+    ]
+  },
+  {
+    "name": "Leona",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_leona/skins/base/images/tft16_leona_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_leona/skins/base/images/tft16_leona_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_leona/hud/tft16_leona_square.tft_set16.png",
+    "traits": [
+      "Targon"
+    ]
+  },
+  {
+    "name": "Aphelios",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_aphelios/skins/base/images/tft16_aphelios_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_aphelios/skins/base/images/tft16_aphelios_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_aphelios/hud/tft16_aphelios_square.tft_set16.png",
+    "traits": [
+      "Targon"
+    ]
+  },
+  {
+    "name": "Taric",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_taric/skins/base/images/tft16_taric_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_taric/skins/base/images/tft16_taric_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_taric/hud/tft16_taric_square.tft_set16.png",
+    "traits": [
+      "Targon"
+    ]
+  },
+  {
+    "name": "Jarvan IV",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_jarvaniv/skins/base/images/tft16_jarvaniv_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_jarvaniv/skins/base/images/tft16_jarvaniv_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_jarvaniv/hud/tft16_jarvaniv_square.tft_set16.png",
+    "traits": [
+      "Demacia",
+      "Defender"
+    ]
+  },
+  {
+    "name": "Sona",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sona/skins/base/images/tft16_sona_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sona/skins/base/images/tft16_sona_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sona/hud/tft16_sona_square.tft_set16.png",
+    "traits": [
+      "Demacia",
+      "Invoker"
+    ]
+  },
+  {
+    "name": "Garen",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_garen/skins/base/images/tft16_garen_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_garen/skins/base/images/tft16_garen_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_garen/hud/tft16_garen_square.tft_set16.png",
+    "traits": [
+      "Demacia",
+      "Defender"
+    ]
+  },
+  {
+    "name": "Lux",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lux/skins/base/images/tft16_lux_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lux/skins/base/images/tft16_lux_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lux/hud/tft16_lux_square.tft_set16.png",
+    "traits": [
+      "Demacia",
+      "Arcanist"
+    ]
+  },
+  {
+    "name": "Anivia",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_anivia/skins/base/images/tft16_anivia_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_anivia/skins/base/images/tft16_anivia_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_anivia/hud/tft16_anivia_square.tft_set16.png",
+    "traits": [
+      "Freljord",
+      "Invoker"
+    ]
+  },
+  {
+    "name": "Ashe",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ashe/skins/base/images/tft16_ashe_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ashe/skins/base/images/tft16_ashe_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ashe/hud/tft16_ashe_square.tft_set16.png",
+    "traits": [
+      "Freljord",
+      "Quickstriker"
+    ]
+  },
+  {
+    "name": "Braum",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_braum/skins/base/images/tft16_braum_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_braum/skins/base/images/tft16_braum_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_braum/hud/tft16_braum_square.tft_set16.png",
+    "traits": [
+      "Freljord",
+      "Warden"
+    ]
+  },
+  {
+    "name": "Lissandra",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lissandra/skins/base/images/tft16_lissandra_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lissandra/skins/base/images/tft16_lissandra_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lissandra/hud/tft16_lissandra_square.tft_set16.png",
+    "traits": [
+      "Freljord",
+      "Invoker"
+    ]
+  },
+  {
+    "name": "Milio",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_milio/skins/base/images/tft16_milio_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_milio/skins/base/images/tft16_milio_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_milio/hud/tft16_milio_square.tft_set16.png",
+    "traits": [
+      "Ixtal",
+      "Invoker"
+    ]
+  },
+  {
+    "name": "Neeko",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_neeko/skins/base/images/tft16_neeko_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_neeko/skins/base/images/tft16_neeko_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_neeko/hud/tft16_neeko_square.tft_set16.png",
+    "traits": [
+      "Ixtal",
+      "Arcanist",
+      "Defender"
+    ]
+  },
+  {
+    "name": "Jinx",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_jinx/skins/base/images/tft16_jinx_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_jinx/skins/base/images/tft16_jinx_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_jinx/hud/tft16_jinx_square.tft_set16.png",
+    "traits": [
+      "Zaun",
+      "Gunslinger"
+    ]
+  },
+  {
+    "name": "Caitlyn",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_caitlyn/skins/base/images/tft16_caitlyn_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_caitlyn/skins/base/images/tft16_caitlyn_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_caitlyn/hud/tft16_caitlyn_square.tft_set16.png",
+    "traits": [
+      "Piltover",
+      "Longshot"
+    ]
+  },
+  {
+    "name": "Vi",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_vi/skins/base/images/tft16_vi_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_vi/skins/base/images/tft16_vi_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_vi/hud/tft16_vi_square.tft_set16.png",
+    "traits": [
+      "Piltover",
+      "Zaun",
+      "Defender"
+    ]
+  },
+  {
+    "name": "Seraphine",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_seraphine/skins/base/images/tft16_seraphine_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_seraphine/skins/base/images/tft16_seraphine_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_seraphine/hud/tft16_seraphine_square.tft_set16.png",
+    "traits": [
+      "Piltover",
+      "Disruptor"
+    ]
+  },
+  {
+    "name": "Yasuo",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yasuo/skins/base/images/tft16_yasuo_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yasuo/skins/base/images/tft16_yasuo_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yasuo/hud/tft16_yasuo_square.tft_set16.png",
+    "traits": [
+      "Ionia",
+      "Slayer"
+    ]
+  },
+  {
+    "name": "Ahri",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ahri/skins/base/images/tft16_ahri_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ahri/skins/base/images/tft16_ahri_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ahri/hud/tft16_ahri_square.tft_set16.png",
+    "traits": [
+      "Ionia",
+      "Arcanist"
+    ]
+  },
+  {
+    "name": "Wukong",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_wukong/skins/base/images/tft16_wukong_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_wukong/skins/base/images/tft16_wukong_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_wukong/hud/tft16_wukong_square.tft_set16.png",
+    "traits": [
+      "Ionia",
+      "Bruiser"
+    ]
+  },
+  {
+    "name": "Shen",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_shen/skins/base/images/tft16_shen_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_shen/skins/base/images/tft16_shen_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_shen/hud/tft16_shen_square.tft_set16.png",
+    "traits": [
+      "Ionia",
+      "Bruiser"
+    ]
+  },
+  {
+    "name": "Malzahar",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_malzahar/skins/base/images/tft16_malzahar_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_malzahar/skins/base/images/tft16_malzahar_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_malzahar/hud/tft16_malzahar_square.tft_set16.png",
+    "traits": [
+      "Void",
+      "Disruptor"
+    ]
+  },
+  {
+    "name": "Rek'Sai",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_reksai/skins/base/images/tft16_reksai_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_reksai/skins/base/images/tft16_reksai_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_reksai/hud/tft16_reksai_square.tft_set16.png",
+    "traits": [
+      "Void",
+      "Vanquisher"
+    ]
+  },
+  {
+    "name": "Cho'Gath",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_chogath/skins/base/images/tft16_chogath_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_chogath/skins/base/images/tft16_chogath_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_chogath/hud/tft16_chogath_square.tft_set16.png",
+    "traits": [
+      "Void",
+      "Juggernaut"
+    ]
+  },
+  {
+    "name": "Kog'Maw",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kogmaw/skins/base/images/tft16_kogmaw_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kogmaw/skins/base/images/tft16_kogmaw_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kogmaw/hud/tft16_kogmaw_square.tft_set16.png",
+    "traits": [
+      "Void",
+      "Arcanist",
+      "Longshot"
+    ]
+  },
+  {
+    "name": "Annie",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_annie/skins/base/images/tft16_annie_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_annie/skins/base/images/tft16_annie_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_annie/hud/tft16_annie_square.tft_set16.png",
+    "traits": [
+      "Dark Child",
+      "Arcanist"
+    ]
+  },
+  {
+    "name": "Ornn",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ornn/skins/base/images/tft16_ornn_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ornn/skins/base/images/tft16_ornn_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ornn/hud/tft16_ornn_square.tft_set16.png",
+    "traits": [
+      "Blacksmith",
+      "Warden"
+    ]
+  },
+  {
+    "name": "Kindred",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kindred/skins/base/images/tft16_kindred_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kindred/skins/base/images/tft16_kindred_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kindred/hud/tft16_kindred_square.tft_set16.png",
+    "traits": [
+      "Eternal",
+      "Quickstriker"
+    ]
+  },
+  {
+    "name": "Azir",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_azir/skins/base/images/tft16_azir_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_azir/skins/base/images/tft16_azir_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_azir/hud/tft16_azir_square.tft_set16.png",
+    "traits": [
+      "Shurima",
+      "Emperor",
+      "Disruptor"
+    ]
+  },
+  {
+    "name": "Zilean",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_zilean/skins/base/images/tft16_zilean_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_zilean/skins/base/images/tft16_zilean_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_zilean/hud/tft16_zilean_square.tft_set16.png",
+    "traits": [
+      "Chronokeeper",
+      "Invoker"
+    ]
+  },
+  {
+    "name": "Fiddlesticks",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_fiddlesticks/skins/base/images/tft16_fiddlesticks_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_fiddlesticks/skins/base/images/tft16_fiddlesticks_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_fiddlesticks/hud/tft16_fiddlesticks_square.tft_set16.png",
+    "traits": [
+      "Harvester",
+      "Vanquisher"
+    ]
+  },
+  {
+    "name": "Shyvana",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_shyvana/skins/base/images/tft16_shyvana_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_shyvana/skins/base/images/tft16_shyvana_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_shyvana/hud/tft16_shyvana_square.tft_set16.png",
+    "traits": [
+      "Dragonborn",
+      "Juggernaut"
+    ]
+  },
+  {
+    "name": "Galio",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_galio/skins/base/images/tft16_galio_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_galio/skins/base/images/tft16_galio_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_galio/hud/tft16_galio_square.tft_set16.png",
+    "traits": [
+      "Demacia",
+      "Heroic"
+    ]
+  },
+  {
+    "name": "Tahm Kench",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_tahmkench/skins/base/images/tft16_tahmkench_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_tahmkench/skins/base/images/tft16_tahmkench_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_tahmkench/hud/tft16_tahmkench_square.tft_set16.png",
+    "traits": [
+      "Bilgewater",
+      "Glutton",
+      "Bruiser"
+    ]
+  },
+  {
+    "name": "Sejuani",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sejuani/skins/base/images/tft16_sejuani_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sejuani/skins/base/images/tft16_sejuani_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sejuani/hud/tft16_sejuani_square.tft_set16.png",
+    "traits": [
+      "Freljord",
+      "Defender"
+    ]
+  },
+  {
+    "name": "Sett",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sett/skins/base/images/tft16_sett_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sett/skins/base/images/tft16_sett_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sett/hud/tft16_sett_square.tft_set16.png",
+    "traits": [
+      "Ionia",
+      "The Boss"
+    ]
+  },
+  {
+    "name": "Brock",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_brock/skins/base/images/tft16_brock_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_brock/skins/base/images/tft16_brock_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_brock/skins/base/images/tft16_brock_splash_tile_0.tft_set16.png",
+    "traits": [
+      "Ixtal"
+    ]
+  },
+  {
+    "name": "T-Hex",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_thex/hud/tft16_thex.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_thex/hud/tft16_thex_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_thex/hud/tft16_thex_square.tft_set16.png",
+    "traits": [
+      "HexMech",
+      "Piltover",
+      "Gunslinger"
+    ]
+  },
+  {
+    "name": "Bel'Veth",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_belveth/skins/base/images/tft16_belveth_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_belveth/skins/base/images/tft16_belveth_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_belveth/hud/tft16_belveth_square.tft_set16.png",
+    "traits": [
+      "Void",
+      "Slayer"
+    ]
+  },
+  {
+    "name": "Singed",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_singed/skins/base/images/tft16_singed_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_singed/skins/base/images/tft16_singed_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_singed/hud/tft16_singed_square.tft_set16.png",
+    "traits": [
+      "Zaun",
+      "Juggernaut"
+    ]
+  },
+  {
+    "name": "Aurelion Sol",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_aurelionsol/skins/base/images/tft16_aurelionsol_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_aurelionsol/skins/base/images/tft16_aurelionsol_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_aurelionsol/hud/tft16_aurelionsol_square.tft_set16.png",
+    "traits": [
+      "Star Forger",
+      "Targon"
+    ]
+  },
+  {
+    "name": "Veigar",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_veigar/skins/base/images/tft16_veigar_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_veigar/skins/base/images/tft16_veigar_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_veigar/hud/tft16_veigar_square.tft_set16.png",
+    "traits": [
+      "Yordle",
+      "Arcanist"
+    ]
+  },
+  {
+    "name": "Baron Nashor",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_baronnashor/skins/base/images/tft16_baronnashor_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_baronnashor/skins/base/images/tft16_baronnashor_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_baronnashor/hud/tft16_baronnashor_square.tft_set16.png",
+    "traits": [
+      "Void",
+      "Riftscourge"
+    ]
+  },
+  {
+    "name": "Darius",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_darius/skins/base/images/tft16_darius_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_darius/skins/base/images/tft16_darius_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_darius/hud/tft16_darius_square.tft_set16.png",
+    "traits": [
+      "Noxus",
+      "Defender"
+    ]
+  },
+  {
+    "name": "Yone",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yone/skins/base/images/tft16_yone_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yone/skins/base/images/tft16_yone_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yone/hud/tft16_yone_square.tft_set16.png",
+    "traits": [
+      "Ionia",
+      "Slayer"
+    ]
+  },
+  {
+    "name": "Warwick",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_warwick/skins/base/images/tft16_warwick_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_warwick/skins/base/images/tft16_warwick_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_warwick/hud/tft16_warwick_square.tft_set16.png",
+    "traits": [
+      "Zaun",
+      "Quickstriker"
+    ]
+  },
+  {
+    "name": "Fizz",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_fizz/skins/base/images/tft16_fizz_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_fizz/skins/base/images/tft16_fizz_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_fizz/hud/tft16_fizz_square.tft_set16.png",
+    "traits": [
+      "Bilgewater",
+      "Yordle"
+    ]
+  },
+  {
+    "name": "Poppy ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_poppy/skins/base/images/tft16_poppy_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_poppy/skins/base/images/tft16_poppy_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_poppy/hud/tft16_poppy_square.tft_set16.png",
+    "traits": [
+      "Demacia",
+      "Yordle",
+      "Juggernaut"
+    ]
+  },
+  {
+    "name": "Kennen ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kennen/skins/base/images/tft16_kennen_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kennen/skins/base/images/tft16_kennen_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kennen/hud/tft16_kennen_square.tft_set16.png",
+    "traits": [
+      "Ionia",
+      "Yordle",
+      "Defender"
+    ]
+  },
+  {
+    "name": "Ziggs ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ziggs/skins/base/images/tft16_ziggs_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ziggs/skins/base/images/tft16_ziggs_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ziggs/hud/tft16_ziggs_square.tft_set16.png",
+    "traits": [
+      "Zaun",
+      "Yordle",
+      "Longshot"
+    ]
+  },
+  {
+    "name": "Aatrox ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_aatrox/skins/base/images/tft16_aatrox_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_aatrox/skins/base/images/tft16_aatrox_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_aatrox/hud/tft16_aatrox_square.tft_set16.png",
+    "traits": [
+      "Darkin",
+      "World Ender",
+      "Slayer"
+    ]
+  },
+  {
+    "name": "Volibear ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_volibear/skins/base/images/tft16_volibear_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_volibear/skins/base/images/tft16_volibear_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_volibear/hud/tft16_volibear_square.tft_set16.png",
+    "traits": [
+      "Freljord",
+      "Bruiser"
+    ]
+  },
+  {
+    "name": "Jhin",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_jhin/skins/base/images/tft16_jhin_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_jhin/skins/base/images/tft16_jhin_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_jhin/hud/tft16_jhin_square.tft_set16.png",
+    "traits": [
+      "Ionia",
+      "Gunslinger"
+    ]
+  },
+  {
+    "name": "Sylas ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sylas/skins/base/images/tft16_sylas_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sylas/skins/base/images/tft16_sylas_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_sylas/hud/tft16_sylas_square.tft_set16.png",
+    "traits": [
+      "Chainbreaker",
+      "Arcanist",
+      "Defender"
+    ]
+  },
+  {
+    "name": "Ryze ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ryze/skins/base/images/tft16_ryze_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ryze/skins/base/images/tft16_ryze_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ryze/hud/tft16_ryze_square.tft_set16.png",
+    "traits": [
+      "Rune Mage"
+    ]
+  },
+  {
+    "name": "Nidalee ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_nidalee/skins/base/images/tft16_nidalee_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_nidalee/skins/base/images/tft16_nidalee_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_nidalee/hud/tft16_nidalee_square.tft_set16.png",
+    "traits": [
+      "Ixtal",
+      "Huntress"
+    ]
+  },
+  {
+    "name": "Tryndamere ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_tryndamere/skins/base/images/tft16_tryndamere_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_tryndamere/skins/base/images/tft16_tryndamere_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_tryndamere/hud/tft16_tryndamere_square.tft_set16.png",
+    "traits": [
+      "Freljord",
+      "Slayer"
+    ]
+  },
+  {
+    "name": "Rift Herald ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_riftherald/skins/base/images/tft16_riftherald_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_riftherald/skins/base/images/tft16_riftherald_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_riftherald/skins/base/images/tft16_riftherald_splash_tile_0.tft_set16.png",
+    "traits": [
+      "Void",
+      "Bruiser"
+    ]
+  },
+  {
+    "name": "Mel ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_mel/skins/base/images/tft16_mel_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_mel/skins/base/images/tft16_mel_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_mel/hud/tft16_mel_square.tft_set16.png",
+    "traits": [
+      "Noxus",
+      "Disruptor"
+    ]
+  },
+  {
+    "name": "Graves ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_graves/skins/base/images/tft16_graves_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_graves/skins/base/images/tft16_graves_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_graves/hud/tft16_graves_square.tft_set16.png",
+    "traits": [
+      "Bilgewater",
+      "Gunslinger"
+    ]
+  },
+  {
+    "name": "Skarner ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_skarner/skins/base/images/tft16_skarner_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_skarner/skins/base/images/tft16_skarner_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_skarner/hud/tft16_skarner_square.tft_set16.png",
+    "traits": [
+      "Ixtal"
+    ]
+  },
+  {
+    "name": "Diana ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_diana/skins/base/images/tft16_diana_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_diana/skins/base/images/tft16_diana_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_diana/hud/tft16_diana_square.tft_set16.png",
+    "traits": [
+      "Targon"
+    ]
+  },
+  {
+    "name": "Kai'Sa ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kaisa/skins/base/images/tft16_kaisa_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kaisa/skins/base/images/tft16_kaisa_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kaisa/hud/tft16_kaisa_square.tft_set16.png",
+    "traits": [
+      "Assimilator",
+      "Void",
+      "Longshot"
+    ]
+  },
+  {
+    "name": "Renekton ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_renekton/skins/base/images/tft16_renekton_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_renekton/skins/base/images/tft16_renekton_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_renekton/hud/tft16_renekton_square.tft_set16.png",
+    "traits": [
+      "Shurima"
+    ]
+  },
+  {
+    "name": "Nasus ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_nasus/skins/base/images/tft16_nasus_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_nasus/skins/base/images/tft16_nasus_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_nasus/hud/tft16_nasus_square.tft_set16.png",
+    "traits": [
+      "Shurima"
+    ]
+  },
+  {
+    "name": "Xerath ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_xerath/skins/base/images/tft16_xerath_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_xerath/skins/base/images/tft16_xerath_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_xerath/hud/tft16_xerath_square.tft_set16.png",
+    "traits": [
+      "Shurima",
+      "Ascendant"
+    ]
+  },
+  {
+    "name": "Thresh ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_thresh/skins/base/images/tft16_thresh_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_thresh/skins/base/images/tft16_thresh_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_thresh/hud/tft16_thresh_square.tft_set16.png",
+    "traits": [
+      "Shadow Isles",
+      "Warden"
+    ]
+  },
+  {
+    "name": "Gwen ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_gwen/skins/base/images/tft16_gwen_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_gwen/skins/base/images/tft16_gwen_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_gwen/hud/tft16_gwen_square.tft_set16.png",
+    "traits": [
+      "Shadow Isles",
+      "Disruptor"
+    ]
+  },
+  {
+    "name": "Kalista ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kalista/skins/base/images/tft16_kalista_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kalista/skins/base/images/tft16_kalista_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kalista/hud/tft16_kalista_square.tft_set16.png",
+    "traits": [
+      "Shadow Isles",
+      "Vanquisher"
+    ]
+  },
+  {
+    "name": "LeBlanc ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_leblanc/skins/base/images/tft16_leblanc_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_leblanc/skins/base/images/tft16_leblanc_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_leblanc/hud/tft16_leblanc_square.tft_set16.png",
+    "traits": [
+      "Noxus",
+      "Invoker"
+    ]
+  },
+  {
+    "name": "Viego",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_viego/skins/base/images/tft16_viego_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_viego/skins/base/images/tft16_viego_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_viego/hud/tft16_viego_square.tft_set16.png",
+    "traits": [
+      "Shadow Isles",
+      "Quickstriker"
+    ]
+  },
+  {
+    "name": "Ekko",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ekko/skins/base/images/tft16_ekko_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ekko/skins/base/images/tft16_ekko_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_ekko/hud/tft16_ekko_square.tft_set16.png",
+    "traits": [
+      "Zaun",
+      "Disruptor"
+    ]
+  },
+  {
+    "name": "Bard ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_bard/skins/base/images/tft16_bard_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_bard/skins/base/images/tft16_bard_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_bard/hud/tft16_bard_square.tft_set16.png",
+    "traits": [
+      "Caretaker"
+    ]
+  },
+  {
+    "name": "Vayne",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_vayne/skins/base/images/tft16_vayne_splash_centered_25.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_vayne/skins/base/images/tft16_vayne_splash_tile_25.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_vayne/hud/tft16_vayne_square.tft_set16.png",
+    "traits": [
+      "Demacia",
+      "Longshot"
+    ]
+  },
+  {
+    "name": "Yunara",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yunara/skins/base/images/tft16_yunara_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yunara/skins/base/images/tft16_yunara_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yunara/hud/tft16_yunara_square.tft_set16.png",
+    "traits": [
+      "Ionia",
+      "Quickstriker"
+    ]
+  },
+  {
+    "name": "Swain",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_swain/skins/base/images/tft16_swain_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_swain/skins/base/images/tft16_swain_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_swain/hud/tft16_swain_square.tft_set16.png",
+    "traits": [
+      "Noxus",
+      "Arcanist",
+      "Juggernaut"
+    ]
+  },
+  {
+    "name": "Xin Zhao",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_xinzhao/skins/base/images/tft16_xinzhao_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_xinzhao/skins/base/images/tft16_xinzhao_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_xinzhao/hud/tft16_xinzhao_square.tft_set16.png",
+    "traits": [
+      "Demacia",
+      "Ionia",
+      "Warden"
+    ]
+  },
+  {
+    "name": "Yorick ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yorick/skins/base/images/tft16_yorick_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yorick/skins/base/images/tft16_yorick_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_yorick/hud/tft16_yorick_square.tft_set16.png",
+    "traits": [
+      "Shadow Isles",
+      "Warden"
+    ]
+  },
+  {
+    "name": "Orianna ",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_orianna/skins/base/images/tft16_orianna_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_orianna/skins/base/images/tft16_orianna_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_orianna/hud/tft16_orianna_square.tft_set16.png",
+    "traits": [
+      "Piltover",
+      "Invoker"
+    ]
+  },
+  {
+    "name": "Qiyana",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_qiyana/skins/base/images/tft16_qiyana_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_qiyana/skins/base/images/tft16_qiyana_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_qiyana/hud/tft16_qiyana_square.tft_set16.png",
+    "traits": [
+      "Ixtal",
+      "Slayer"
+    ]
+  },
+  {
+    "name": "Loris",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_loris/skins/base/images/tft16_loris_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_loris/skins/base/images/tft16_loris_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_loris/hud/tft16_loris_square.tft_set16.png",
+    "traits": [
+      "Piltover",
+      "Warden"
+    ]
+  },
+  {
+    "name": "Blitzcrank",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_blitzcrank/skins/base/images/tft16_blitzcrank_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_blitzcrank/skins/base/images/tft16_blitzcrank_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_blitzcrank/hud/tft16_blitzcrank_square.tft_set16.png",
+    "traits": [
+      "Zaun",
+      "Juggernaut"
+    ]
+  },
+  {
+    "name": "Dr. Mundo",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_drmundo/skins/base/images/tft16_drmundo_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_drmundo/skins/base/images/tft16_drmundo_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_drmundo/hud/tft16_drmundo_square.tft_set16.png",
+    "traits": [
+      "Zaun",
+      "Bruiser"
+    ]
+  },
+  {
+    "name": "Zaahen",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_zaahen/skins/base/images/tft16_zaahen_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_zaahen/skins/base/images/tft16_zaahen_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_zaahen/hud/tft16_zaahen_square.tft_set16.png",
+    "traits": [
+      "Darkin",
+      "Immortal"
+    ]
+  },
+  {
+    "name": "Tibbers",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_annietibbers/hud/tft16_annietibbers_splash_uncentered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_annietibbers/hud/tft16_annietibbers_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_annietibbers/hud/tft16_annietibbers_square.tft_set16.png",
+    "traits": [
+      "Arcanist"
+    ]
+  },
+  {
+    "name": "Lucian & Senna",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lucian/skins/base/images/tft16_lucian_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lucian/skins/base/images/tft16_lucian_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_lucian/hud/tft16_lucian_square.tft_set16.png",
+    "traits": [
+      "Soulbound",
+      "Gunslinger"
+    ]
+  },
+  {
+    "name": "Kobuko & Yuumi",
+    "icon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kobuko/skins/base/images/tft16_kobuko_splash_centered_0.tft_set16.png",
+    "squareIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kobuko/skins/base/images/tft16_kobuko_splash_tile_0.tft_set16.png",
+    "tileIcon": "https://raw.communitydragon.org/latest/game/assets/characters/tft16_kobuko/hud/tft16_kobuko_square.tft_set16.png",
+    "traits": [
+      "Yordle",
+      "Bruiser",
+      "Invoker"
+    ]
+  }
+]

@@ -4,6 +4,7 @@ import cors from 'cors';
 import { google } from 'googleapis';
 import { randomBytes } from 'crypto';
 import * as db from './database';
+import tftRouter from './tftAPI';
 import 'dotenv/config';
 
 const app = express();
@@ -11,6 +12,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+
+// Rotas API TFT
+app.use('/api/tft', tftRouter);
 
 // Configuração do Google OAuth
 const oauth2Client = new google.auth.OAuth2(
