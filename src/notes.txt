@@ -1,2 +1,0 @@
-Desktop -> Game not running (waiting to execute)
-In Game -> Already in game (giving data)

@@ -1,7 +1,7 @@
 import { OWGames, OWHotkeys } from "@overwolf/overwolf-api-ts";
 
 import { AppWindow } from "../AppWindow";
-import { kHotkeys, kWindowNames, kGamesFeatures } from "../consts";
+import { kHotkeys, kWindowNames, kGamesFeatures } from "../../consts";
 
 import WindowState = overwolf.windows.WindowStateEx;
 

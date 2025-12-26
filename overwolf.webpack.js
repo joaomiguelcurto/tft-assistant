@@ -42,7 +42,7 @@ module.exports = class OverwolfPlugin {
   async makeOPK(suffix = '') {
     const
       packagePath = path.resolve(__dirname, './package.json'),
-      manifestPath = path.resolve(__dirname, './public/manifest.json'),
+      manifestPath = path.resolve(__dirname, './manifest.json'),
       dist = path.join(__dirname, 'dist/');
 
     const [
@@ -71,7 +71,7 @@ module.exports = class OverwolfPlugin {
   async setVersion(newVersion) {
     const
       packagePath = path.resolve(__dirname, './package.json'),
-      manifestPath = path.resolve(__dirname, './public/manifest.json');
+      manifestPath = path.resolve(__dirname, './manifest.json');
 
     const [
       pkg,

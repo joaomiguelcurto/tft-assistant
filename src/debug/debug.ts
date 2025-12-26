@@ -1,7 +1,7 @@
 import { OWGames } from "@overwolf/overwolf-api-ts";
 
 import { AppWindow } from "../AppWindow";
-import { kWindowNames, kGamesFeatures } from "../consts";
+import { kWindowNames, kGamesFeatures } from "../../consts";
 
 // TFT-specific info type to avoid property errors (dynamic keys)
 interface TFTInfo {

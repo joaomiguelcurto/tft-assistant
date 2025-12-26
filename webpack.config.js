@@ -31,9 +31,12 @@ module.exports = env => ({
     },
     plugins: [
         new CleanWebpackPlugin,
-        new CopyPlugin({
-            patterns: [ { from: "public", to: "./" } ],
-        }),
+
+        //theres no public folder 
+        // new CopyPlugin({
+        //     patterns: [ { from: "public", to: "./" } ],
+        // }),
+
         new HtmlWebpackPlugin({
             template: './src/background/background.html',
             filename: path.resolve(__dirname, './dist/background.html'),

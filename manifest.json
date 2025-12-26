@@ -8,10 +8,10 @@
     "minimum-overwolf-version": "0.160.0",
     "description": "Teamfight Tactics Assistant",
     "dock_button_title": "TFT Assistant",
-    "icon": "icons/IconMouseOver.png",
-    "icon_gray": "icons/IconMouseNormal.png",
-    "launcher_icon": "icons/desktop-icon.ico",
-    "window_icon": "icons/IconMouseOver.png"
+    "icon": "icons/IconMouseNormal.png",
+    "icon_gray": "icons/IconMouseOver.png",
+    "launcher_icon": "icons/appIcon.ico",
+    "window_icon": "icons/IconMouseNormal.png"
   },
   "permissions": [
     "Hotkeys",
@@ -29,12 +29,12 @@
     },
     "windows": {
       "background": {
-        "file": "background.html",
+        "file": "dist/background.html",
         "background_optimization": true,
         "is_background_page": true
       },
       "desktop": {
-        "file": "desktop.html",
+        "file": "dist/desktop.html",
         "desktop_only": true,
         "native_window": true,
         "resizable": true,
@@ -50,8 +50,9 @@
         }
       },
       "in_game": {
-        "file": "in_game.html",
-        "in_game_only": true,
+        "file": "dist/in_game.html",
+        "desktop_only": true,
+        "native_window": true,
         "focus_game_takeover": "ReleaseOnHidden",
         "focus_game_takeover_release_hotkey": "sample_app_ts_showhide",
         "resizable": true,
@@ -67,7 +68,7 @@
         }
       },
       "debug": {
-        "file": "debug.html",
+        "file": "dist/debug.html",
         "resizable": true,
         "transparent": true,
         "override_on_update": true,
