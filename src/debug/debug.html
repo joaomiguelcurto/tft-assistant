@@ -12,7 +12,7 @@
   <!-- -------------------------------- Header ------------------------------- -->
 
   <header id="header" class="app-header">
-    <img src="../../img/header_icon.svg" />
+    <img src="../../icons/appIcon.ico" width="20px" />
     <h1>Debug Window - TFT Game Data</h1>
     <div class="window-controls-group">
       <button id="minimizeButton" class="window-control window-control-minimize" />
@@ -24,7 +24,6 @@
   <!-- --------------------------------- Main -------------------------------- -->
   <main>
     <div id="logs">
-      <a href="Reload">Reload</a>
       <div id="events" class="logColumn">
         <h1>Game Events</h1>
         <div id="eventsLog" class="dataText">
@@ -36,9 +35,9 @@
       </div>
     </div>
     <div id="other">
-      <h1>Real-time Game Data</h1>
       <p id="infoParagraph">
-        Monitoring TFT game data...
+        <a href="Reload">
+          <img src="../../icons/refresh.svg" id="refreshIcon" alt="refreshBtn" width="50px"/></a>
       </p>
     </div>
   </main>

@@ -60,6 +60,18 @@ h1 {
   color: #8d8d8d;
 }
 
+#refreshIcon {
+  filter: invert(0.95);
+  margin-top: 24px;
+}
+
+  #refreshIcon:hover {
+    cursor: pointer;
+    background-color: #a2a2a2;
+    border-radius: 4px;
+    transition: 0.2s cubic-bezier(.02,.61,.14,.98);
+  }
+
 #other > #sampleAdText {
   margin: 1em 0 0.5em 0;
   font-family: "Roboto Mono", sans-serif;
