@@ -5,9 +5,10 @@ body {
   min-height: 100vh;
   overflow: hidden;
   font-size: 14px;
-  background-color: #f6f6f6;
+  background: #071A27;
+  background: radial-gradient(circle, rgba(7, 26, 39, 1) 0%, rgba(2, 16, 23, 1) 100%);
   color: black;
-  font-family: sans-serif;
+  font-family: "Proxima Nova", sans-serif;
 }
 
 main {
@@ -17,21 +18,41 @@ main {
   position: relative;
 }
 
-a {
-  color: inherit;
+.login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 50px;
 }
 
+  .login * {
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(.02,.61,.14,.98);
+  }
+
+  .login :hover {
+    transform: scale(1.1);
+  }
+
 .desktopTop {
-  color: white;
-  background-image: url("../img/background.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  height: 243px;
-  top: 0;
+  max-width: 100%;
+  height: auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desktopTop > #appLogo {
+  flex: 1 1 30%;
 }
 
 .desktopTop h1 {
-  font-family: "Roboto Mono", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -46,47 +67,6 @@ a {
   color: #d5d5d5;
   font-size: 15px;
   line-height: 20px;
-}
-
-#version {
-  margin-top: 57px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  color: #8d8d8d;
-}
-
-.desktopBottom {
-  background-color: #464646;
-  width: 100%;
-  flex: 1;
-  display: flex;
-  padding: 67px 0px;
-}
-
-.desktopBottom > #left {
-  flex: 1 1 30%;
-}
-
-.desktopBottom > #left > h1 {
-  font-family: "Roboto Mono", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  margin: 0px 57px;
-  color: #d5d5d5;
-}
-
-.desktopBottom > #middle {
-  flex: 1 1 40%;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  color: #8d8d8d;
-}
-
-.desktopBottom > #right {
-  flex: 1 1 30%;
 }
 
 #ad {
