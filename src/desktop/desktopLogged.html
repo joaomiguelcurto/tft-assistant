@@ -26,59 +26,135 @@
 
   <!-- --------------------------------- Main -------------------------------- -->
   <main>
-        <div class="headerLogged">
-          <span class="welcome-text">Welcome [user]!</span>
-        <div class="logout" id="logoutBtn">
-            <a href="desktop.html">
-            <img src="../../icons/logout.svg" alt="leaveIcon" width="50px" /></a>
-        </div>
+    <div class="headerLogged">
+      <span class="welcome-text" id="welcomeText">Welcome!</span>
+      <div class="logout" id="logoutBtn" style="cursor: pointer;">
+        <img src="../../icons/logout.svg" alt="leaveIcon" width="50px" />
+      </div>
     </div>
 
     <div class="logo-container">
-        <div class="logo">
-          <img src="../../img/LogoTFT.png" width="200px" />
-          </div>
+      <div class="logo">
+        <img src="../../img/LogoTFT.png" width="200px" />
+      </div>
     </div>
 
     <div class="cards-container">
-        <div class="card">
-            <div class="card-icon">
-              <a href="#">
-              <img src="../../icons/appFeatures/comps.svg" alt="compsIcon" width="60px" /></a>       
-            </div>
-            <div class="card-content">
-                <h2 class="card-title">Comps</h2>
-                <p class="card-description">Browse tier lists and discover the strongest team compositions.</p>
-            </div>
+      <div class="card" id="compsCardContainer" style="cursor: pointer;">
+        <div class="card-icon">
+          <img src="../../icons/appFeatures/comps.svg" alt="compsIcon" width="60px" />       
         </div>
+        <div class="card-content">
+          <h2 class="card-title">Comps</h2>
+          <p class="card-description">Browse tier lists and discover the strongest team compositions.</p>
+        </div>
+      </div>
 
-        <div class="card">
-            <div class="card-icon" id="compsCard">
-              <a href="#">
-              <img src="../../img/LogoTFT.png" alt="assistantIcon" width="65px" style="filter: brightness(2) saturate(0)" /></a>   
-            </div>
-            <div class="card-content" id="assistantCard">
-                <h2 class="card-title">Assistant</h2>
-                <p class="card-description">Find the best possible moves according to your specific composition.</p>
-            </div>
+      <div class="card" id="assistantCardContainer" style="cursor: pointer;">
+        <div class="card-icon">
+          <img src="../../img/LogoTFT.png" alt="assistantIcon" width="65px" style="filter: brightness(2) saturate(0)" />   
         </div>
+        <div class="card-content">
+          <h2 class="card-title">Assistant</h2>
+          <p class="card-description">Find the best possible moves according to your specific composition.</p>
+        </div>
+      </div>
 
-        <div class="card">
-            <div class="card-icon" id="builderCard">
-              <a href="#">
-              <img src="../../icons/appFeatures/builder.svg" alt="builderIcon" width="60px" /></a>   
-            </div>
-            <div class="card-content">
-                <h2 class="card-title">Builder</h2>
-                <p class="card-description">Plan your strategy with our interactive hex board builder.</p>
-            </div>
+      <div class="card" id="builderCardContainer" style="cursor: pointer;">
+        <div class="card-icon">
+          <img src="../../icons/appFeatures/builder.svg" alt="builderIcon" width="60px" />   
         </div>
+        <div class="card-content">
+          <h2 class="card-title">Builder</h2>
+          <p class="card-description">Plan your strategy with our interactive hex board builder.</p>
+        </div>
+      </div>
     </div>
 
     <div class="status-message">
-        <span class="loading-dots">Waiting for a TFT match to start</span>
+      <span class="loading-dots">Waiting for a TFT match to start</span>
     </div>
   </main>
+
+  <script>
+    // Display username immediately from localStorage
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Inline script running');
+      const userDataStr = localStorage.getItem('userData');
+      console.log('User data from localStorage:', userDataStr);
+      
+      if (userDataStr) {
+        try {
+          const userData = JSON.parse(userDataStr);
+          console.log('Parsed user data:', userData);
+          const welcomeText = document.getElementById('welcomeText');
+          if (welcomeText && userData.name) {
+            welcomeText.textContent = 'Welcome ' + userData.name + '!';
+            console.log('Welcome text updated to:', welcomeText.textContent);
+          }
+        } catch (e) {
+          console.error('Error parsing user data:', e);
+        }
+      }
+      
+      // Setup logout handler
+      const logoutBtn = document.getElementById('logoutBtn');
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', async function(e) {
+          e.preventDefault();
+          console.log('Logout clicked');
+          
+          const sessionToken = localStorage.getItem('sessionToken');
+          
+          // Call logout endpoint
+          if (sessionToken) {
+            try {
+              await fetch('http://localhost:3000/auth/logout', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ token: sessionToken })
+              });
+              console.log('Logout request sent');
+            } catch (error) {
+              console.error('Logout error:', error);
+            }
+          }
+          
+          // Clear localStorage
+          localStorage.removeItem('sessionToken');
+          localStorage.removeItem('userData');
+          console.log('localStorage cleared');
+          
+          // Redirect to desktop
+          window.location.href = 'desktop.html';
+        });
+      }
+      
+      // Setup card navigation
+      const compsCard = document.getElementById('compsCardContainer');
+      if (compsCard) {
+        compsCard.addEventListener('click', function() {
+          window.location.href = 'comps.html';
+        });
+      }
+      
+      const assistantCard = document.getElementById('assistantCardContainer');
+      if (assistantCard) {
+        assistantCard.addEventListener('click', function() {
+          window.location.href = 'assistant.html';
+        });
+      }
+      
+      const builderCard = document.getElementById('builderCardContainer');
+      if (builderCard) {
+        builderCard.addEventListener('click', function() {
+          window.location.href = 'builder.html';
+        });
+      }
+    });
+  </script>
 
   <script>
     // Standard Google Universal Analytics code
@@ -100,8 +176,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-

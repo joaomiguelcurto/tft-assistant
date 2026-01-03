@@ -9,6 +9,7 @@ module.exports = env => ({
     entry: {
         background: './src/background/background.ts',
         desktop: './src/desktop/desktop.ts',
+        desktopLogged: './src/desktop/desktopLogged.ts',
         in_game: './src/in_game/in_game.ts',
         debug: './src/debug/debug.ts'
     },
@@ -42,6 +43,8 @@ module.exports = env => ({
             filename: path.resolve(__dirname, './dist/background.html'),
             chunks: ['background']
         }),
+
+        // desktop
         new HtmlWebpackPlugin({
             template: './src/desktop/desktop.html',
             filename: path.resolve(__dirname, './dist/desktop.html'),
@@ -57,6 +60,8 @@ module.exports = env => ({
             filename: path.resolve(__dirname, './dist/desktopLogged.html'),
             chunks: ['desktopLogged']
         }),
+
+        // in_game
         new HtmlWebpackPlugin({
             template: './src/in_game/in_game.html',
             filename: path.resolve(__dirname, './dist/in_game.html'),

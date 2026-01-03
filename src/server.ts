@@ -119,19 +119,15 @@ app.get('/auth/google/callback', async (req: Request, res: Response) => {
     const session = await db.createSession(user.id);
 
     const userData = {
-      sessionToken: session.session_token,
       googleId: user.google_id,
       email: user.email,
       name: user.name,
-      picture: user.picture,
-      createdAt: user.created_at.toISOString()
+      picture: user.picture
     };
 
     console.log('Utilizador autenticado:', user.email);
 
-    // Redirecionar para o Overwolf app com o token
-    // Depois, trocar isto por outro HTML à parte mais bonitinho xD
-    // Janela que aparece e que fecha logo depois do login ter sido confirmado
+    // IMPORTANT: Fix the postMessage - use proper JSON escaping
     res.send(`
       <!DOCTYPE html>
       <html>
@@ -165,14 +161,18 @@ app.get('/auth/google/callback', async (req: Request, res: Response) => {
           <p>Podes fechar esta janela.</p>
         </div>
         <script>
-          if (window.opener) {
-            window.opener.postMessage({
-              type: 'GOOGLE_AUTH_SUCCESS',
-              token: '${session.session_token}',
-              user: ${JSON.stringify(userData)}
-            }, '*');
-            setTimeout(() => window.close(), 2000);
-          }
+          (function() {
+            if (window.opener) {
+              const messageData = {
+                type: 'GOOGLE_AUTH_SUCCESS',
+                token: ${JSON.stringify(session.session_token)},
+                user: ${JSON.stringify(userData)}
+              };
+              console.log('Sending message to parent:', messageData);
+              window.opener.postMessage(messageData, '*');
+              setTimeout(() => window.close(), 2000);
+            }
+          })();
         </script>
       </body>
       </html>
