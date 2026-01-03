@@ -48,6 +48,16 @@ module.exports = env => ({
             chunks: ['desktop']
         }),
         new HtmlWebpackPlugin({
+            template: './src/desktop/desktop.html',
+            filename: path.resolve(__dirname, './dist/desktop.html'),
+            chunks: ['desktop']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/desktop/desktopLogged.html',
+            filename: path.resolve(__dirname, './dist/desktopLogged.html'),
+            chunks: ['desktopLogged']
+        }),
+        new HtmlWebpackPlugin({
             template: './src/in_game/in_game.html',
             filename: path.resolve(__dirname, './dist/in_game.html'),
             chunks: ['in_game']

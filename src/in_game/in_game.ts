@@ -14,7 +14,7 @@ interface TFTInfo {
   };
   me?: { gold?: string; health?: string; xp?: string; rank?: string };
   store?: { shop_pieces?: string };
-  board?: { board_pieces?: string };
+  board?: { board_pieces?: string }; 
   bench?: { bench_pieces?: string };
   carousel?: { carousel_pieces?: string };
   roster?: { player_status?: string };

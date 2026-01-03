@@ -5,3 +5,14 @@ import { kWindowNames } from "../../consts";
 // In our case, our desktop window has no logic - it only displays static data.
 // Therefore, only the generic AppWindow class is called.
 new AppWindow(kWindowNames.desktop);
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Login navigation
+  const login = document.getElementById('loginBtn');
+  if (login) {
+    login.addEventListener('click', () => {
+      window.location.href = 'desktopLogged.html';
+    });
+  }
+});
+

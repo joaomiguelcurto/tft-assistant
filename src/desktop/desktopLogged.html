@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../css/general.css" />
+  <link rel="stylesheet" href="../../css/header.css" />
+  <link rel="stylesheet" href="../../css/desktop.css" />
+  <link rel="stylesheet" href="../../css/modal.css" />
+  <link rel="stylesheet" href="../../css/desktopLogged.css" />
+  <title>TFT Assistant - Desktop</title>
+</head>
+
+<body class="desktop">
+  <!-- -------------------------------- Header ------------------------------- -->
+
+  <header id="header" class="app-header">
+    <img src="../../icons/appIcon.ico" width="20px" />
+    <h1>TFT Assistant</h1>
+    <div class="window-controls-group">
+      <button id="minimizeButton" class="window-control window-control-minimize" />
+      <button id="maximizeButton" class="window-control window-control-maximize" />
+      <button id="closeButton" class="window-control window-control-close" />
+    </div>
+  </header>
+
+  <!-- --------------------------------- Main -------------------------------- -->
+  <main>
+        <div class="headerLogged">
+          <span class="welcome-text">Welcome [user]!</span>
+        <div class="logout" id="logoutBtn">
+            <a href="desktop.html">
+            <img src="../../icons/logout.svg" alt="leaveIcon" width="50px" /></a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <div class="logo">
+          <img src="../../img/LogoTFT.png" width="200px" />
+          </div>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-icon">
+              <a href="#">
+              <img src="../../icons/appFeatures/comps.svg" alt="compsIcon" width="60px" /></a>       
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Comps</h2>
+                <p class="card-description">Browse tier lists and discover the strongest team compositions.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon" id="compsCard">
+              <a href="#">
+              <img src="../../img/LogoTFT.png" alt="assistantIcon" width="65px" style="filter: brightness(2) saturate(0)" /></a>   
+            </div>
+            <div class="card-content" id="assistantCard">
+                <h2 class="card-title">Assistant</h2>
+                <p class="card-description">Find the best possible moves according to your specific composition.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon" id="builderCard">
+              <a href="#">
+              <img src="../../icons/appFeatures/builder.svg" alt="builderIcon" width="60px" /></a>   
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Builder</h2>
+                <p class="card-description">Plan your strategy with our interactive hex board builder.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="status-message">
+        <span class="loading-dots">Waiting for a TFT match to start</span>
+    </div>
+  </main>
+
+  <script>
+    // Standard Google Universal Analytics code
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      },
+        i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      // Note: https protocol here
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-144253676-3', 'auto');
+
+    // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
+    ga('set', 'checkProtocolTask', function () { });
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview', '/desktop.html');
+  </script>
+</body>
+</html>
+
+
+
+
+

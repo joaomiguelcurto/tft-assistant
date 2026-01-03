@@ -49,6 +49,22 @@
           "height": 699
         }
       },
+      "desktopLogged": {
+        "file": "dist/desktopLogged.html",
+        "desktop_only": true,
+        "native_window": true,
+        "resizable": true,
+        "transparent": true,
+        "override_on_update": true,
+        "size": {
+          "width": 1212,
+          "height": 699
+        },
+        "min_size": {
+          "width": 1212,
+          "height": 699
+        }
+      },
       "in_game": {
         "file": "dist/in_game.html",
         "desktop_only": true,
