@@ -5,6 +5,19 @@ import { kHotkeys, kWindowNames, kGamesFeatures } from "../../consts";
 
 import WindowState = overwolf.windows.WindowStateEx;
 
+new AppWindow(kWindowNames.inGame);
+
+// Re-routes
+document.addEventListener('DOMContentLoaded', () => {
+  // Go to debug window
+  const debugWindow = document.getElementById('openDebugButton');
+  if (debugWindow) {
+    debugWindow.addEventListener('click', () => {
+      window.location.href = 'debug.html';
+    });
+  }
+});
+
 // TFT-specific info type to avoid property errors (dynamic keys)
 interface TFTInfo {
   match_info?: {

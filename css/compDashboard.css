@@ -1,0 +1,205 @@
+/* CSS MAIN */
+:root {
+    /* Responsive hex sizing */
+    --hex-size: clamp(50px, 7vw, 120px);
+    --hex-height: calc(var(--hex-size) * 1.1547);
+    --hex-width: var(--hex-size);
+    --grid-gap: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: "Proxima Nova", sans-serif;
+    background: radial-gradient(circle at center, #141d2b 0%, #0a111a 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow-x: hidden;
+}
+
+/* Constraints the whole app so it doesn't "break" on wide screens */
+.app-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Top Navigation --- */
+.top-nav {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.back-btn:hover { transform: translateX(-5px); }
+
+.back-btn svg {
+    fill: white;
+    width: 32px;
+    height: 32px;
+}
+
+/* --- Main Layout --- */
+.main-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* --- Traits Sidebar --- */
+.traits-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.trait-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.trait-item.gold { border-color: #f1b53d; background: rgba(241, 181, 61, 0.05); }
+.trait-item.bronze { border-color: #cd7f32; background: rgba(205, 127, 50, 0.05); }
+
+.trait-hex {
+    width: 30px;
+    height: 34px;
+    background: #2a3544;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.gold .trait-hex { background: #f1b53d; }
+.bronze .trait-hex { background: #cd7f32; }
+
+.trait-info p { font-size: 0.9rem; font-weight: 600; margin-bottom: 2px; }
+.trait-dots { display: flex; gap: 3px; }
+.dot { width: 6px; height: 6px; background: rgba(255,255,255,0.2); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+
+/* --- Game Board --- */
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hex-grid {
+    display: flex;
+    flex-direction: column;
+    /* Creates the vertical interlocking */
+    gap: calc(var(--hex-height) * -0.30 + var(--grid-gap));
+}
+
+.hex-row {
+    display: flex;
+    gap: var(--grid-gap);
+}
+
+/* Stagger every even row */
+.hex-row:nth-child(even) {
+    transform: translateX(calc(var(--hex-width) / 2 + (var(--grid-gap) / 2)));
+}
+
+.hex-cell {
+    width: var(--hex-width);
+    height: var(--hex-height);
+    position: relative;
+    cursor: pointer;
+}
+
+/* Inside Part (For Images later) */
+.hex-inner {
+    position: absolute;
+    inset: 2px; /* Slight inset so stroke doesn't cut off */
+    background: #1c2531;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 1;
+}
+
+/* Inside Part (For Images later) */
+.hex-inner:hover {
+    background: #141414;
+}
+
+/* Stroke Layer (Stays on Top) */
+.hex-stroke {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hex-stroke svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #3b4959;
+    stroke-width: 4px;
+}
+
+/* --- Footer --- */
+.board-footer {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.comp-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 50vh;
+}
+
+.save-btn {
+    position: absolute;
+    right: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 15px 50px;
+    border-radius: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.save-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+/* Responsive Breakpoints */
+@media (max-width: 1000px) {
+    .main-content { grid-template-columns: 1fr; }
+    .traits-sidebar { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+    .save-btn { position: static; margin-left: 20px; }
+    .board-footer { flex-direction: column; gap: 20px; }
+}

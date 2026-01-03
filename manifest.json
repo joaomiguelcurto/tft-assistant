@@ -83,13 +83,49 @@
           "height": 699
         }
       },
-      "debug": {
-        "file": "dist/debug.html",
+      "comps": {
+        "file": "dist/comps.html",
+        "desktop_only": true,
+        "native_window": true,
+        "focus_game_takeover": "ReleaseOnHidden",
+        "focus_game_takeover_release_hotkey": "sample_app_ts_showhide",
         "resizable": true,
         "transparent": true,
         "override_on_update": true,
-        "desktop_only": false,
-        "in_game_only": false,
+        "size": {
+          "width": 1212,
+          "height": 699
+        },
+        "min_size": {
+          "width": 1212,
+          "height": 699
+        }
+      },
+      "compDashboard": {
+        "file": "dist/compDashboard.html",
+        "desktop_only": true,
+        "native_window": true,
+        "focus_game_takeover": "ReleaseOnHidden",
+        "focus_game_takeover_release_hotkey": "sample_app_ts_showhide",
+        "resizable": true,
+        "transparent": true,
+        "override_on_update": true,
+        "size": {
+          "width": 1212,
+          "height": 699
+        },
+        "min_size": {
+          "width": 1212,
+          "height": 699
+        }
+      },
+      "debug": {
+        "file": "dist/debug.html",
+        "desktop_only": true,
+        "native_window": true,
+        "resizable": true,
+        "transparent": true,
+        "override_on_update": true,
         "size": {
           "width": 1212,
           "height": 699

@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: "Proxima Nova", sans-serif;
+    background: #071A27;
+    background: radial-gradient(circle, rgba(7, 26, 39, 1) 0%, rgba(2, 16, 23, 1) 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 80px 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(400px, -200px) rotate(-15deg) scale(4.5);
+    width: 400px;
+    height: 400px;
+    background-image: url('/tft-assistant/img/TFT_Assis_Logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.01;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.header,
+.tier-list {
+    position: relative;
+    z-index: 1;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.back-button {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(.02,.61,.14,.98);
+}
+
+.back-button:hover {
+    transform: translateX(-8px);
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tier-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+}
+
+/* --- Tier Buttons (Rows) --- */
+.tier-button {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(236, 236, 236, 0.1);
+    border-radius: 20px;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Color bump hover effects (No movement) */
+.tier-s:hover { background: rgba(255, 71, 87, 0.08); border-color: rgba(255, 71, 87, 0.4); }
+.tier-a:hover { background: rgba(255, 165, 2, 0.08); border-color: rgba(255, 165, 2, 0.4); }
+.tier-b:hover { background: rgba(255, 217, 61, 0.08); border-color: rgba(255, 217, 61, 0.4); }
+.tier-c:hover { background: rgba(107, 207, 127, 0.08); border-color: rgba(107, 207, 127, 0.4); }
+.tier-x:hover { background: rgba(168, 184, 204, 0.08); border-color: rgba(168, 184, 204, 0.4); }
+
+.tier-label {
+    font-size: 48px;
+    font-weight: 700;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* --- Hexagons (Comps) --- */
+.tier-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tier-icon {
+    width: 45px; /* Slightly larger for image visibility */
+    height: 52px;
+    position: relative;
+    cursor: pointer;
+    background: transparent; /* Changed from your original static color */
+    clip-path: none; /* Removed original clip-path to allow for the layered system */
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Scale up the individual comp hex on hover */
+.tier-icon:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.hex-inner {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1); /* Default background */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Your future <img> goes here */
+.hex-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hex-border {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hex-border svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 5px;
+}
+
+/* Specific Tier Colors for Hexagons */
+.tier-s .hex-inner { background: rgba(255, 71, 87, 0.2); }
+.tier-s .tier-icon:hover .hex-border svg { stroke: #ff4757; }
+
+.tier-a .hex-inner { background: rgba(255, 165, 2, 0.2); }
+.tier-a .tier-icon:hover .hex-border svg { stroke: #ffa502; }
+
+.tier-b .hex-inner { background: rgba(255, 217, 61, 0.2); }
+.tier-b .tier-icon:hover .hex-border svg { stroke: #ffd93d; }
+
+.tier-c .hex-inner { background: rgba(107, 207, 127, 0.2); }
+.tier-c .tier-icon:hover .hex-border svg { stroke: #6bcf7f; }
+
+.tier-x .hex-inner { background: rgba(168, 184, 204, 0.2); }
+.tier-x .tier-icon:hover .hex-border svg { stroke: #a8b8cc; }
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 30px;
+    }
+
+    .back {
+        margin-bottom: 40px;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .tier-button {
+        padding: 25px 30px;
+    }
+
+    .tier-label {
+        font-size: 36px;
+    }
+
+    .tier-icon {
+        width: 28px;
+        height: 28px;
+    }
+}

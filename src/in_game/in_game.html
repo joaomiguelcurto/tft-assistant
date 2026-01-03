@@ -26,11 +26,60 @@
 
   <!-- --------------------------------- Main -------------------------------- -->
   <main>
-    <div style="display: flex; align-items: center; justify-content: center; height: 100%; flex-direction: column;">
-      <h2>TFT Overwolf App</h2>
-      <button id="openDebugButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
-        Open Debug Window
-      </button>
+        <div class="headerLogged">
+        <span class="welcome-text">Welcome [user]!</span>
+        <div class="logout" id="logoutBtn">
+            <img src="../../icons/logout.svg" alt="leaveIcon" width="40px" />
+        </div>
+
+        <div class="debugBtn" id="openDebugButton">
+            <img src="../../icons/appFeatures/debug.svg" alt="debugWindow" width="40px" />
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <div class="logo">
+          <img src="../../img/LogoTFT.png" width="200px" />
+        </div>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-icon">
+              <a href="#">
+              <img src="../../icons/appFeatures/comps.svg" alt="compsIcon" width="60px" /></a>       
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Comps</h2>
+                <p class="card-description">Browse tier lists and discover the strongest team compositions.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon" id="compsCard">
+              <a href="#">
+              <img src="../../img/LogoTFT.png" alt="assistantIcon" width="65px" style="filter: brightness(2) saturate(0)" /></a>   
+            </div>
+            <div class="card-content" id="assistantCard">
+                <h2 class="card-title">Assistant</h2>
+                <p class="card-description">Find the best possible moves according to your specific composition.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon" id="builderCard">
+              <a href="#">
+              <img src="../../icons/appFeatures/builder.svg" alt="builderIcon" width="60px" /></a>   
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Builder</h2>
+                <p class="card-description">Plan your strategy with our interactive hex board builder.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="status-message">
+        <span class="loading-dots">Match in progress!</span>
     </div>
   </main>
 

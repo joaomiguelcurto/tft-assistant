@@ -7,7 +7,8 @@
     "build": "webpack --mode=development --env makeOpk",
     "dev": "webpack --watch --mode=development",
     "watch": "webpack --watch --mode=development",
-    "server": "nodemon --watch src --ext ts --exec \"npx tsx\" src/server.ts"
+    "server": "nodemon --watch src --ext ts --exec \"npx tsx\" src/server.ts",
+    "devserver": "npx concurrently \"npm run server\" \"npm run dev\""
   },
   "keywords": [],
   "author": "",

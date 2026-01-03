@@ -1,152 +1,161 @@
-body {
-  background-color: #333333;
-  margin: 0px;
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  min-height: 100vh;
-  overflow: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 main {
-  display: flex;
-  flex: 1;
-  position: relative;
-  padding: 38px;
+    font-family: "Proxima Nova", sans-serif;
+    background: #071A27;
+    background: radial-gradient(circle, rgba(7, 26, 39, 1) 0%, rgba(2, 16, 23, 1) 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-h1 {
-  font-family: "Roboto Mono", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  color: #d5d5d5;
+.headerLogged {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: auto;
 }
 
-#logs {
-  display: flex;
-  justify-content: space-between;
-  flex: 0 0 auto;
-  width: calc(100% - 210px);
+.welcome-text {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
-.logColumn {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 50%;
-  padding-right: 30px;
-}
-
-#ad {
-  margin-top: auto;
-  height: 300px;
-  width: 400px;
-  background-color: #454545;
-  border-radius: 4px;
-}
-
-#other {
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 auto;
-  width: 210px;
-}
-
-#other > #infoParagraph {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 150%;
-  color: #8d8d8d;
-}
-
-#refreshIcon {
-  filter: invert(0.95);
-  margin-top: 24px;
-}
-
-  #refreshIcon:hover {
+.logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    filter: invert(0.95);
     cursor: pointer;
-    background-color: #a2a2a2;
-    border-radius: 4px;
-    transition: 0.2s cubic-bezier(.02,.61,.14,.98);
-  }
-
-#other > #sampleAdText {
-  margin: 1em 0 0.5em 0;
-  font-family: "Roboto Mono", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 133.59%;
-  align-self: center;
-  color: #8d8d8d;
+    transition: transform 0.2s cubic-bezier(.02,.61,.14,.98);
 }
 
-#other > p {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 150%;
+.logout:hover {
+    transform: scale(1.1);
 }
 
-.dataText {
-  background-color: #464646;
-  border-radius: 4px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  white-space: nowrap;
-  padding: 10px;
-  margin-top: 16px;
-  color: #8d8d8d;
-  height: calc(100vh - 165px);
-  max-width: inherit;
-  font-size: 13px;
+.debugBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 6px;
+    filter: invert(1);
+    cursor: pointer;
+    transition: filter 0.5s cubic-bezier(.02,.61,.14,.98);
 }
 
-.dataText pre {
-  white-space: pre-line;
-  word-break: break-word;
-  margin: 5px 0;
+.debugBtn:hover {
+    background-color: #e9e9e9;
+    filter: invert(0.9);
 }
 
-.dataText::-webkit-scrollbar {
-  width: 20px;
+.logo-container {
+    margin-bottom: 60px;
 }
 
-.dataText::-webkit-scrollbar-track {
-  background: #333333;
-  border-left: 9px solid #464646;
-  border-right: 9px solid #464646;
-  margin: 10px 0px;
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.dataText::-webkit-scrollbar-thumb {
-  background: #8d8d8d;
-  border-left: 8px solid #464646;
-  border-right: 8px solid #464646;
+.cards-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
 }
 
-.highlight {
-  color: #00defa;
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(247, 247, 247, 0.3);
+    border-radius: 25px;
+    padding: 27px 35px;
+    width: 375px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(.02,.61,.14,.98);
 }
 
-button.logCopy {
-  background: #464646;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
-  color: #d5d5d5;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 120%;
-  padding: 6px 8px;
-  margin-top: 10px;
-  cursor: pointer;
-  align-self: flex-start;
+.card:hover {
+    background: rgba(107, 104, 104, 0.05);
+    border-color: #4a9fd8;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(74, 159, 216, 0.2);
 }
 
-button.logCopy:hover {
-  background: #8d8d8d;
-  color: #ffffff;
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12.5px;
+    flex-shrink: 0;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.card-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #a8b8cc;
+    font-weight: 300;
+}
+
+.status-message {
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+    color: #f3f3f3;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 1024px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerLogged {
+        top: 20px;
+        right: 20px;
+    }
+
+    .welcome-text {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
 }
